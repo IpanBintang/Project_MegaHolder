@@ -70,12 +70,9 @@ ul {
 
 /* --- Typography --- */
 h1 {
-  font-size: 2.8em;
   font-family: "Courier New", Courier, monospace;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #e63000;
-  margin-bottom: 10px;
 }
 
 h2, h3 {
@@ -112,21 +109,16 @@ h4 {
   color: #e63000;
 }
 
-.tagline {
-  font-style: italic;
-  font-size: 1.2em;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
 /* --- Header / Nav --- */
 #header {
   background-color: #000;
   border-bottom: 3px solid #e63000;
   padding: 14px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 200;
 }
 
 #header .container {
@@ -139,28 +131,29 @@ h4 {
 
 #logo {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+}
+
+#logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #e63000;
 }
 
 #logo-text {
   font-family: "Courier New", Courier, monospace;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
   color: #e63000;
   letter-spacing: 4px;
 }
 
-#logo-sub {
-  font-size: 0.75em;
-  color: #999;
-  letter-spacing: 1px;
-}
-
 #main-nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 2px;
 }
 
 #main-nav ul li a {
@@ -169,9 +162,9 @@ h4 {
   font-size: 0.78em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 6px 10px;
+  padding: 6px 12px;
   display: block;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s;
 }
 
 #main-nav ul li a:hover {
@@ -191,17 +184,82 @@ h4 {
   letter-spacing: 1px;
 }
 
-/* --- Hero --- */
+/* =============================================
+   PARALLAX HERO SECTION
+   ============================================= */
+
 .section-hero {
-  background-color: #0a0a0a;
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(255,255,255,0.015) 2px,
-    rgba(255,255,255,0.015) 4px
-  );
-  padding: 90px 0;
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Push down below fixed header */
+  margin-top: 71px;
+}
+
+/* The parallax background layer — JS moves this on scroll */
+.hero-parallax-bg {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  right: 0;
+  bottom: -30%;
+  background-image: url('https://kgb.my/wp-content/uploads/2020/06/KGBBANNER-scaled.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Dark overlay so text stays readable */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 1;
+}
+
+/* Content sits on top */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-label {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  letter-spacing: 6px;
+  color: #fff;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.hero-kgb-title {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 9em;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 3px #fff;
+  text-stroke: 3px #fff;
+  letter-spacing: 20px;
+  line-height: 1;
+  margin-top: 30px;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+}
+
+.hero-subtitle {
+  font-family: Georgia, serif;
+  font-size: 1.6em;
+  color: #fff;
+  letter-spacing: 4px;
+  margin-top: 10px;
+  font-style: italic;
 }
 
 /* --- Buttons --- */
@@ -224,25 +282,27 @@ h4 {
 }
 
 .btn-primary {
-  background-color: #e63000;
+  background-color: rgba(0,0,0,0.7);
   color: #fff;
+  border-color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #c42800;
+  background-color: #e63000;
   color: #fff;
-  border-color: #c42800;
+  border-color: #e63000;
 }
 
 .btn-outline {
-  background-color: transparent;
-  color: #e63000;
-  border: 2px solid #e63000;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .btn-outline:hover {
   background-color: #e63000;
   color: #fff;
+  border-color: #e63000;
 }
 
 .btn-sm {
@@ -258,6 +318,24 @@ h4 {
   background-color: #e63000;
   color: #fff;
   text-decoration: none;
+}
+
+/* Order buttons inside promo/footer sections */
+.section-light .btn-primary,
+.section-light .btn-outline {
+  background-color: #e63000;
+  color: #fff;
+  border-color: #e63000;
+}
+
+.section-light .btn-outline {
+  background-color: transparent;
+  color: #e63000;
+}
+
+.section-light .btn-outline:hover {
+  background-color: #e63000;
+  color: #fff;
 }
 
 /* --- Order Section Buttons --- */
@@ -433,35 +511,14 @@ h4 {
   transition: background 0.2s, color 0.2s;
 }
 
-.facebook {
-  border-color: #3b5998;
-  color: #3b5998;
-}
-.facebook:hover {
-  background-color: #3b5998;
-  color: #fff;
-  text-decoration: none;
-}
+.facebook { border-color: #3b5998; color: #3b5998; }
+.facebook:hover { background-color: #3b5998; color: #fff; text-decoration: none; }
 
-.instagram {
-  border-color: #c13584;
-  color: #c13584;
-}
-.instagram:hover {
-  background-color: #c13584;
-  color: #fff;
-  text-decoration: none;
-}
+.instagram { border-color: #c13584; color: #c13584; }
+.instagram:hover { background-color: #c13584; color: #fff; text-decoration: none; }
 
-.email {
-  border-color: #e63000;
-  color: #e63000;
-}
-.email:hover {
-  background-color: #e63000;
-  color: #fff;
-  text-decoration: none;
-}
+.email { border-color: #e63000; color: #e63000; }
+.email:hover { background-color: #e63000; color: #fff; text-decoration: none; }
 
 #hq-info {
   font-size: 0.9em;
@@ -469,9 +526,7 @@ h4 {
   line-height: 2;
 }
 
-#hq-info a {
-  color: #e63000;
-}
+#hq-info a { color: #e63000; }
 
 /* --- Footer --- */
 #footer {
@@ -487,8 +542,14 @@ h4 {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.9em;
+  .hero-kgb-title {
+    font-size: 5em;
+    -webkit-text-stroke: 2px #fff;
+    letter-spacing: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1em;
   }
 
   .section-title {
@@ -532,9 +593,5 @@ h4 {
   .menu-item-card {
     max-width: 100%;
     width: 100%;
-  }
-
-  .section-hero {
-    padding: 60px 0;
   }
 }
