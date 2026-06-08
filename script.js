@@ -1,6 +1,28 @@
 // script.js — KGB Killer Gourmet Burgers
 
-// Toggle mobile navigation menu
+// =============================================
+// PARALLAX SCROLL EFFECT
+// The background image moves at half the scroll
+// speed of the page content, creating depth.
+// =============================================
+function updateParallax() {
+  var bg = document.getElementById("parallax-bg");
+  if (!bg) return;
+  // scrollY * 0.4 = background moves at 40% of scroll speed
+  var offset = window.pageYOffset * 0.4;
+  bg.style.transform = "translateY(" + offset + "px)";
+}
+
+window.onscroll = function() {
+  updateParallax();
+};
+
+// Run once on load to set initial position
+updateParallax();
+
+// =============================================
+// TOGGLE MOBILE NAVIGATION MENU
+// =============================================
 function toggleMenu() {
   var nav = document.getElementById("main-nav");
   if (nav.className === "open") {
@@ -10,7 +32,9 @@ function toggleMenu() {
   }
 }
 
-// Toggle GrabFood dropdown
+// =============================================
+// TOGGLE GRABFOOD DROPDOWN
+// =============================================
 function toggleGrab() {
   var dropdown = document.getElementById("grab-dropdown");
   if (dropdown.className.indexOf("hidden") !== -1) {
@@ -31,7 +55,9 @@ document.onclick = function(e) {
   }
 };
 
-// Smooth scroll for anchor links
+// =============================================
+// SMOOTH SCROLL FOR ANCHOR LINKS
+// =============================================
 var links = document.getElementsByTagName("a");
 for (var i = 0; i < links.length; i++) {
   (function(link) {
@@ -42,7 +68,7 @@ for (var i = 0; i < links.length; i++) {
         if (target) {
           e.preventDefault();
           target.scrollIntoView({ behavior: "smooth" });
-          // Close mobile nav after clicking
+          // Close mobile nav after clicking a nav link
           var nav = document.getElementById("main-nav");
           if (nav) { nav.className = ""; }
         }
