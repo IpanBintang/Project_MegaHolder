@@ -1,232 +1,303 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Killer Gourmet Burgers made casual. The most unique urban diner experience." />
-  <title>KGB - Killer Gourmet Burgers</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>BURGER KING®</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
 
-  <!-- HEADER / NAV -->
-  <div id="header">
-    <div class="container">
-      <div id="logo">
-        <span id="logo-text">KGB</span>
-        <span id="logo-sub">Killer Gourmet Burgers</span>
-      </div>
-      <button id="menu-toggle" onclick="toggleMenu()">&#9776; Menu</button>
-      <nav id="main-nav">
-        <ul>
-          <li><a href="#order">Order Online</a></li>
-          <li><a href="#promo">Promotions</a></li>
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#locations">Locations</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </nav>
+    <!-- ========== MOBILE NAVIGATION ========== -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="overlay"></div>
+        <div class="mobile-nav-content" id="mobileNavContent">
+            <div class="mobile-logo">BK®</div>
+            <span class="divider"></span>
+            <ul>
+                <li><a href="#menu">Menu <span class="spacer"></span> ›</a></li>
+                <li><a href="#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
+                <li><a href="#offers">Offers <span class="spacer"></span> ›</a></li>
+                <li class="has-menu">
+                    <a href="#" id="MobileMore">More <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileSubMenu">
+                        <ul>
+                            <li><a href="#about">About BK</a></li>
+                            <li><a href="#news">BK News</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 
-  <!-- HERO / ORDER SECTION with Parallax -->
-  <div id="order" class="section-hero">
-    <div class="hero-parallax-bg" id="parallax-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-label">-PLACE YOUR ORDER-</p>
-      <div class="btn-group">
-        <a href="https://mini.aliments.my/outlet?chain=kgb" class="btn btn-primary" target="_blank">KGB Delivery</a>
-        <div id="grabfood-wrapper">
-          <button class="btn btn-outline" onclick="toggleGrab()">GrabFood &#9660;</button>
-          <ul id="grab-dropdown" class="dropdown hidden">
-            <li><a href="https://food.grab.com/my/en/restaurant/kgb-bangsar-delivery/MYDD03542" target="_blank">KGB Bangsar</a></li>
-            <li><a href="https://food.grab.com/my/en/restaurant/kgb-empire-subang-delivery/1-CYNTEJAKTBTFCE" target="_blank">KGB Subang SS15</a></li>
-            <li><a href="https://food.grab.com/my/en/restaurant/kgb-putrajaya-delivery/1-CYVYBCCDCCEGAA" target="_blank">KGB IOI Putrajaya</a></li>
-            <li><a href="https://food.grab.com/my/en/restaurant/kgb-pavilion-delivery/1-CYNTEJATA6LJLT" target="_blank">KGB Pavilion, KL</a></li>
-            <li><a href="https://food.grab.com/my/en/restaurant/kgb-ttdi-delivery/MYDD03218" target="_blank">KGB TTDI</a></li>
-          </ul>
-        </div>
-      </div>
-      <h1 class="hero-kgb-title">KGB</h1>
-      <p class="hero-subtitle">Killer Gourmet Burgers</p>
-    </div>
-  </div>
+    <!-- ========== DESKTOP HEADER / NAVIGATION ========== -->
+    <header id="desktopHeader" class="desktop-header">
+        <nav class="nav-container" aria-label="Primary Navigation">
+            <div class="nav-left" id="navLeft">
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#restaurants" class="nav-link">Restaurants</a>
+                <a href="#offers" class="nav-link">Offers</a>
+                <div class="dropdown-wrapper">
+                    <button id="moreMenuBtn" class="nav-btn" aria-expanded="false">More ▾</button>
+                    <div id="moreDropdown" class="dropdown-menu" style="display:none;">
+                        <ul>
+                            <li><a href="#about">About BK</a></li>
+                            <li><a href="#news">BK News</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-  <!-- PROMOTIONS -->
-  <div id="promo" class="section section-light">
-    <div class="container">
-      <h2 class="section-title">Promotions</h2>
-      <div class="promo-grid">
-        <div class="promo-item">
-          <img src="https://kgb.my/wp-content/uploads/2026/02/KGB-Burger-Warisan-A4-Instagram-Post.jpg" alt="KGB Burger Warisan Promotion" />
-        </div>
-        <div class="promo-item">
-          <img src="https://kgb.my/wp-content/uploads/2025/12/KGB-New-Slider-Menu-1080-x-1080-px-1024x1024.jpg" alt="KGB New Menu Promotion" />
-        </div>
-        <div class="promo-item">
-          <img src="https://kgb.my/wp-content/uploads/2026/01/2026_KGB-Big-Daddy-n-Cluck-cluck-Poster_IG-square-1024x1024.jpg" alt="KGB Big Daddy and Cluck Cluck Promotion" />
-        </div>
-      </div>
-    </div>
-  </div>
+            <div class="nav-center">
+                <a href="#" class="logo-link" aria-label="Burger King Home">
+                    <div class="logo-text">BK®</div>
+                </a>
+            </div>
 
-  <!-- OUR STORY -->
-  <div id="story" class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Our Story</h2>
-      <p class="center-text">Killer Gourmet Burgers &#8212; your casual dining space bursting with raw energy and delicious handcrafted burgers, fries &amp; desserts. Indulge in our chin-dripping juicy burgers, made with serious passion for the passionate.</p>
-      <p class="center-text"><em>After all, life is too short for a bad burger.</em></p>
+            <div class="nav-right">
+                <!-- Mobile hamburger button -->
+                <div class="mobile-header" id="mobileHeader">
+                    <button id="mobileMenuBtn" aria-label="Open navigation menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-      <h3 class="section-subtitle">The KGB Experience</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h4>Real Food, Real People</h4>
-          <p>We believe the best burgers can only be made with the best ingredients. Our fluffy brioche buns are baked daily. Beef, chicken, and vegetarian patties are freshly prepared daily. KGB&#8217;s burger cooks are masters of the art.</p>
+    <!-- ========== HERO / BANNER CAROUSEL ========== -->
+    <section class="hero" id="home">
+        <div class="hero-carousel" id="heroCarousel">
+            <div class="carousel-item active">
+                <div class="hero-placeholder">
+                    <p>Hero Banner Slide 1</p>
+                    <span>1800 × 760px</span>
+                </div>
+                <div class="carousel-content">
+                    <a href="#menu" class="bk-btn bk-btn-orange">Check It Out</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-placeholder">
+                    <p>Hero Banner Slide 2</p>
+                    <span>1800 × 760px</span>
+                </div>
+                <div class="carousel-content">
+                    <a href="#offers" class="bk-btn bk-btn-orange">Check It Out</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-placeholder">
+                    <p>Hero Banner Slide 3</p>
+                    <span>1800 × 760px</span>
+                </div>
+                <div class="carousel-content">
+                    <a href="#menu" class="bk-btn bk-btn-orange">Check It Out</a>
+                </div>
+            </div>
         </div>
-        <div class="feature-card">
-          <h4>Casual Dining</h4>
-          <p>We remove the fancy parts of gourmet burger dining and maintain a casual setting with down-to-earth prices &#8212; so your comfort food cravings can be satisfied without breaking the bank.</p>
+        <!-- Carousel Controls -->
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+        <button class="carousel-btn next" id="nextBtn" aria-label="Next slide">&#10095;</button>
+        <div class="carousel-dots" id="carouselDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
-        <div class="feature-card">
-          <h4>Beef Doneness Levels</h4>
-          <p>Our beef patties are ground in-house daily from 100% prime cuts of Aussie Angus beef. Burger connoisseurs can safely enjoy medium doneness (or below).</p>
-        </div>
-        <div class="feature-card">
-          <h4>Burger Styles</h4>
-          <p>We serve beef burgers ultra smashed &#8216;diner style&#8217; or flame grilled &#8216;gourmet style&#8217;. Chicken burgers are grilled or deep-fried till golden. Non-meat eaters can enjoy grilled vegetarian patties and mushroom.</p>
-        </div>
-        <div class="feature-card">
-          <h4>Sidekicks</h4>
-          <p>4 choices of regular fries, 4 choices of specialty handcrafted fries, chicken wings, milkshakes and more to complete your gourmet burger experience.</p>
-        </div>
-        <div class="feature-card">
-          <h4>Toppings</h4>
-          <p>From classic caramelized onions and sharp cheddar to espresso bacon jam with maple-glazed cornflakes &#8212; our toppings are anything but ordinary.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- MENU -->
-  <div id="menu" class="section section-light">
-    <div class="container">
-      <h2 class="section-title">Menu</h2>
-      <div class="menu-highlights">
-        <div class="menu-item-card">
-          <img src="https://kgb.my/wp-content/uploads/2020/06/Truffled-Swiss_Burger_2_1000x1000_3.png" alt="Truffled Swiss Burger" />
-          <p>Grilled Beef, Sauteed Portobello Mushrooms, Swiss Cheese, Truffle Infused &amp; Herb Ranch</p>
+    <!-- ========== OFFERS / PROMO GRID ========== -->
+    <section class="offer-grid" id="offers">
+        <div class="offer-items">
+            <div class="offer-banner">
+                <div class="inner">
+                    <div class="img-placeholder">
+                        <p>Offer Banner 1</p>
+                        <span>900 × 480px</span>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-banner">
+                <div class="inner">
+                    <div class="img-placeholder">
+                        <p>Offer Banner 2</p>
+                        <span>900 × 480px</span>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-banner">
+                <div class="inner">
+                    <div class="img-placeholder">
+                        <p>Offer Banner 3</p>
+                        <span>900 × 480px</span>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-banner">
+                <div class="inner">
+                    <div class="img-placeholder">
+                        <p>Offer Banner 4</p>
+                        <span>900 × 480px</span>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-banner">
+                <div class="inner">
+                    <div class="img-placeholder">
+                        <p>Offer Banner 5</p>
+                        <span>900 × 480px</span>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-banner">
+                <div class="inner">
+                    <div class="img-placeholder">
+                        <p>Offer Banner 6</p>
+                        <span>900 × 480px</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu-item-card">
-          <img src="https://kgb.my/wp-content/uploads/2020/06/Pineapple-Express_Burger_1_1000x1000_3.png" alt="Pineapple Express Burger" />
-          <p>Grilled Chicken, Grilled Pineapple, Smoked Ham &amp; KGB Spicy Sauce</p>
+    </section>
+
+    <!-- ========== BRAND / CRM SECTION ========== -->
+    <section class="crm-section" id="about">
+        <div class="crm-content">
+            <div class="crm-left">
+                <h2 class="crm-title">SUPERIOR TASTE<br>YOUR WAY, SINCE 1954</h2>
+                <div class="crm-body">
+                    <p>WE FRESHLY <strong>FLAME-GRILL</strong> OUR <strong>BURGERS</strong></p>
+                    <p>WE USE <strong>FRESH INGREDIENTS</strong>, FRESHLY CHOPPED AND SLICED</p>
+                    <p>WE SOURCE THE <strong>BEST PARTNERS</strong> TO MAKE SURE WE GET THE <strong>BEST INGREDIENTS</strong></p>
+                    <p>WE STACK <strong>BIG, BOLD FLAVORS</strong> IN <strong>GREAT PORTIONS</strong></p>
+                </div>
+            </div>
+            <div class="crm-right">
+                <h2 class="crm-title">JOIN THE <em>BK</em>® FAN KINGDOM</h2>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Facebook</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">Twitter</a>
+                </div>
+                <p class="crm-tagline">Follow your taste buds</p>
+            </div>
         </div>
-        <div class="menu-item-card">
-          <img src="https://kgb.my/wp-content/uploads/2020/06/Double-Animal_Burger_3_1000x1000_3.png" alt="Double Animal Burger" />
-          <p>Double Crust Beef, Mustard Grilled, Double Sharp Cheddar, Caramelized Onions &amp; Shack Sauce</p>
+    </section>
+
+    <!-- ========== RESTAURANT LOCATOR MAP ========== -->
+    <section class="map-section" id="restaurants">
+        <div class="map-container">
+            <!-- Map placeholder - UiTM Kedah location -->
+            <div class="map-placeholder" id="homeMap">
+                <p>Map — UiTM Kedah</p>
+                <span>02600 Arau, Perlis / Kedah Area</span>
+            </div>
         </div>
-        <div class="menu-item-card">
-          <img src="https://kgb.my/wp-content/uploads/2020/06/Bobcat_Burger_5_1000x1000_3.png" alt="Bobcat Burger" />
-          <p>Grilled Beef, Roasted Green Chile, Provolone Cheese &amp; Jalapeno Mayo</p>
+        <div class="map-swatch">
+            <h4 class="map-title">Find a Restaurant</h4>
+            <form class="map-form" id="locationForm" action="#" method="GET">
+                <input
+                    class="map-input"
+                    type="text"
+                    name="locationSearch"
+                    placeholder="Enter address, city or postcode"
+                    aria-label="Search location"
+                >
+                <button class="map-submit" type="submit" aria-label="Search">&#128205;</button>
+            </form>
+            <p class="map-note">Nearest BK® to UiTM Kedah</p>
         </div>
-        <div class="menu-item-card">
-          <img src="https://kgb.my/wp-content/uploads/2020/06/Bash_Burger_4_1000x1000_3.png" alt="Bash Burger" />
-          <p>Grilled Beef, Bacon Relish, Provolone Cheese, Caramelised Onions &amp; Maple Cornflakes</p>
+    </section>
+
+    <!-- ========== OUR STORY SECTION ========== -->
+    <section class="our-story" id="story">
+        <div class="story-content">
+            <h3 class="section-title">SINCE 1954</h3>
+            <h4 class="section-subtitle">60 years of our flame-grilled,<br>freshly prepared tradition goes into every order.</h4>
+            <a href="#" class="bk-btn bk-btn-orange">Read Our Story</a>
         </div>
-      </div>
-      <div class="center">
-        <a href="https://kgb.my/wp-content/uploads/2023/10/webmenu-1.gif" class="btn btn-primary" target="_blank">KGB Full Menu &#8250;</a>
-        <a href="https://kgb.my/wp-content/uploads/2025/10/KGB-Menu-Website-scaled.jpg" class="btn btn-outline" target="_blank">KGB Diner Menu (TGM) &#8250;</a>
-      </div>
-      <p class="center-text halal-note">&#10003; Only Halal Ingredients Used</p>
-    </div>
-  </div>
+    </section>
 
-  <!-- LOCATIONS -->
-  <div id="locations" class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Locations</h2>
-      <div class="locations-grid">
-
-        <div class="location-card">
-          <h4>KGB Diner IOI Damansara</h4>
-          <p>Lot CC-83, Concourse Floor, IOI Mall Damansara, 47810 Petaling Jaya, Selangor</p>
-          <p><strong>Tel:</strong> 03-3010 2322</p>
-          <p><strong>Hours:</strong> 10:00am &#8211; 10:00pm (10:30pm Sat &amp; Sun)</p>
-          <a href="https://maps.google.com/?q=KGB+Diner+IOI+Mall+Damansara" class="btn btn-sm" target="_blank">View Map</a>
+    <!-- ========== MADE TO ORDER SECTION ========== -->
+    <section class="made-to-order" id="menu">
+        <div class="mto-content">
+            <h3 class="section-title">MADE TO ORDER</h3>
+            <h4 class="section-subtitle">Every WHOPPER® Sandwich<br>is made to order.</h4>
+            <a href="#" class="bk-btn bk-btn-orange">Take a Look</a>
         </div>
+    </section>
 
-        <div class="location-card">
-          <h4>KGB Diner TTDI</h4>
-          <p>107, Jalan Aminuddin Baki, Taman Tun Dr Ismail, 60000 Kuala Lumpur</p>
-          <p><strong>Tel:</strong> 03-7733 2284</p>
-          <p><strong>Hours:</strong> 10:30am &#8211; 11:00pm</p>
-          <a href="https://maps.google.com/?q=KGB+TTDI+Killer+Gourmet+Burgers" class="btn btn-sm" target="_blank">View Map</a>
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-bg">
+            <div class="footer-links">
+
+                <div class="footer-col">
+                    <h4>BKC Info</h4>
+                    <ul>
+                        <li><a href="#about">About BK®</a></li>
+                        <li><a href="#story">Fresh Taste</a></li>
+                        <li><a href="#menu">Made to Order</a></li>
+                        <li><a href="#news">News &amp; Press</a></li>
+                        <li><a href="#legal">Legal</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>My BK</h4>
+                    <ul>
+                        <li><a href="#restaurants">Your BK® Locator</a></li>
+                        <li><a href="#">Join the BK® Fan Kingdom</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="#careers">Opportunities</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>BK Cares</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">BURGER KING®</div>
+                    <p class="footer-copy">TM &amp; Copyright 2024 Burger King Corporation. All rights reserved.</p>
+                    <p class="footer-location">Nearest Location: UiTM Kedah, Malaysia</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="Email">@</a>
+                </div>
+            </div>
+
         </div>
+    </footer>
 
-        <div class="location-card">
-          <h4>KGB Diner DPULZE</h4>
-          <p>LG03A, Lower Ground Floor, DPULZE Shopping Centre, Persiaran Multimedia, 63000 Cyberjaya</p>
-          <p><strong>Tel:</strong> 03-8322 4325</p>
-          <p><strong>Hours:</strong> 10:30am &#8211; 10:00pm (10:30pm Sat &amp; Sun)</p>
-          <a href="https://maps.google.com/?q=KGB+Diner+Dpulze+Cyberjaya" class="btn btn-sm" target="_blank">View Map</a>
-        </div>
-
-        <div class="location-card">
-          <h4>KGB The Gardens Midvalley</h4>
-          <p>232-B LG, The Gardens Mall, Mid Valley City, 59200 Kuala Lumpur</p>
-          <p><strong>Tel:</strong> 03-2201 5557</p>
-          <p><strong>Hours:</strong> 10:30am &#8211; 10:30pm</p>
-          <a href="https://maps.google.com/?q=KGB+The+Gardens+Mid+Valley" class="btn btn-sm" target="_blank">View Map</a>
-        </div>
-
-        <div class="location-card">
-          <h4>KGB Pavilion KL</h4>
-          <p>Lot 4.100.02, Jalan Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur</p>
-          <p><strong>Tel:</strong> 03-2110 0110</p>
-          <p><strong>Hours:</strong> 10:30am &#8211; 10:30pm (11pm Sat &amp; Sun)</p>
-          <a href="https://maps.google.com/?q=KGB+Pavilion+KL" class="btn btn-sm" target="_blank">View Map</a>
-        </div>
-
-        <div class="location-card">
-          <h4>KGB Subang SS15</h4>
-          <p>Lot LG 17, Lower Ground Floor, Empire Shopping Gallery, Jln SS16/1, 47500 Subang Jaya, Selangor</p>
-          <p><strong>Tel:</strong> 03-5611 3828</p>
-          <p><strong>Hours:</strong> 10:30am &#8211; 10:30pm</p>
-          <a href="https://maps.google.com/?q=KGB+Burgers+Empire+Subang" class="btn btn-sm" target="_blank">View Map</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div id="contact" class="section section-light">
-    <div class="container center">
-      <h2 class="section-title">Contact Us</h2>
-      <div class="social-links">
-        <a href="https://www.facebook.com/KGB.Killer.Gourmet.Burgers/" target="_blank" class="social-btn facebook">Facebook</a>
-        <a href="https://www.instagram.com/kgb.killer.gourmet.burgers/" target="_blank" class="social-btn instagram">Instagram</a>
-        <a href="mailto:hello@kgb.my" class="social-btn email">Email Us</a>
-      </div>
-      <div id="hq-info">
-        <p><strong>KGB Holdings Sdn Bhd (1092679-U)</strong></p>
-        <p>23, Jalan Telawi 2, Bangsar Baru,<br />
-        59100 Kuala Lumpur, Malaysia</p>
-        <p>+60 3-2201 1220</p>
-        <p>Careers: <a href="mailto:hr@kgb.my">hr@kgb.my</a></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div id="footer">
-    <p>&#169; 2026 KGB Holdings Sdn Bhd (1092679-U). All Rights Reserved.</p>
-  </div>
-
-  <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
