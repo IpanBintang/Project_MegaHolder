@@ -106,11 +106,14 @@ img {
 }
 
 .mobile-logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--bk-brown);
     text-align: center;
     padding: 12px 0 16px;
+}
+
+.mobile-logo-img {
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .mobile-nav-content ul li a {
@@ -150,6 +153,11 @@ img {
     z-index: 900;
     background-color: var(--bk-cream);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.desktop-logo-img {
+    width: 56px;
+    height: auto;
 }
 
 .nav-container {
