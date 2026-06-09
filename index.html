@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <title>BURGER TopHat®</title>
-      <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 
 <body>
@@ -16,18 +16,20 @@
         <div class="overlay"></div>
         <div class="mobile-nav-content" id="mobileNavContent">
             <div class="mobile-logo">
-         <img src="images/Santuy.png" alt="Burger TopHat Logo" class="mobile-logo-img" />
-          </div>
+                <img src="images/Santuy.png" alt="Burger TopHat Logo" class="mobile-logo-img" />
+            </div>
             <span class="divider"></span>
             <ul>
                 <li><a href="#menu">Menu <span class="spacer"></span> ›</a></li>
                 <li><a href="#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
                 <li><a href="#offers">Offers <span class="spacer"></span> ›</a></li>
+                <li><a href="#offers">Coupons <span class="spacer"></span> ›</a></li>
+                <li><a href="#">BK Delivery <span class="spacer"></span> ›</a></li>
                 <li class="has-menu">
                     <a href="#" id="MobileMore">More <span class="spacer"></span> ▾</a>
                     <div class="sub-menu" id="mobileSubMenu">
                         <ul>
-                            <li><a href="#about">About BK</a></li>
+                            <li><a href="#about">About BTH</a></li>
                             <li><a href="#news">Burger TopHat News</a></li>
                             <li><a href="#careers">Careers</a></li>
                             <li><a href="#contact">Contact Us</a></li>
@@ -42,15 +44,18 @@
     <!-- ========== DESKTOP HEADER / NAVIGATION ========== -->
     <header id="desktopHeader" class="desktop-header">
         <nav class="nav-container" aria-label="Primary Navigation">
+
             <div class="nav-left" id="navLeft">
-                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#menu"        class="nav-link">Menu</a>
                 <a href="#restaurants" class="nav-link">Restaurants</a>
-                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#offers"      class="nav-link">Offers</a>
+                <a href="#offers"      class="nav-link">Coupons</a>
+                <a href="#"            class="nav-link">BK Delivery</a>
                 <div class="dropdown-wrapper">
                     <button id="moreMenuBtn" class="nav-btn" aria-expanded="false">More ▾</button>
                     <div id="moreDropdown" class="dropdown-menu" style="display:none;">
                         <ul>
-                            <li><a href="#about">About BK</a></li>
+                            <li><a href="#about">About BTH</a></li>
                             <li><a href="#news">Burger TopHat News</a></li>
                             <li><a href="#careers">Careers</a></li>
                             <li><a href="#contact">Contact Us</a></li>
@@ -61,12 +66,13 @@
             </div>
 
             <div class="nav-center">
-            <a href="#" class="logo-link">
-                  <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
-             </a>
-               </div>
+                <a href="#" class="logo-link">
+                    <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
+                </a>
+            </div>
 
             <div class="nav-right">
+                <a href="#menu" class="bk-btn bk-btn-red nav-order-btn">Order Now</a>
                 <!-- Mobile hamburger button -->
                 <div class="mobile-header" id="mobileHeader">
                     <button id="mobileMenuBtn" aria-label="Open navigation menu">
@@ -76,6 +82,7 @@
                     </button>
                 </div>
             </div>
+
         </nav>
     </header>
 
@@ -110,7 +117,6 @@
                 </div>
             </div>
         </div>
-        <!-- Carousel Controls -->
         <button class="carousel-btn prev" id="prevBtn" aria-label="Previous slide">&#10094;</button>
         <button class="carousel-btn next" id="nextBtn" aria-label="Next slide">&#10095;</button>
         <div class="carousel-dots" id="carouselDots">
@@ -123,54 +129,12 @@
     <!-- ========== OFFERS / PROMO GRID ========== -->
     <section class="offer-grid" id="offers">
         <div class="offer-items">
-            <div class="offer-banner">
-                <div class="inner">
-                    <div class="img-placeholder">
-                        <p>Offer Banner 1</p>
-                        <span>900 × 480px</span>
-                    </div>
-                </div>
-            </div>
-            <div class="offer-banner">
-                <div class="inner">
-                    <div class="img-placeholder">
-                        <p>Offer Banner 2</p>
-                        <span>900 × 480px</span>
-                    </div>
-                </div>
-            </div>
-            <div class="offer-banner">
-                <div class="inner">
-                    <div class="img-placeholder">
-                        <p>Offer Banner 3</p>
-                        <span>900 × 480px</span>
-                    </div>
-                </div>
-            </div>
-            <div class="offer-banner">
-                <div class="inner">
-                    <div class="img-placeholder">
-                        <p>Offer Banner 4</p>
-                        <span>900 × 480px</span>
-                    </div>
-                </div>
-            </div>
-            <div class="offer-banner">
-                <div class="inner">
-                    <div class="img-placeholder">
-                        <p>Offer Banner 5</p>
-                        <span>900 × 480px</span>
-                    </div>
-                </div>
-            </div>
-            <div class="offer-banner">
-                <div class="inner">
-                    <div class="img-placeholder">
-                        <p>Offer Banner 6</p>
-                        <span>900 × 480px</span>
-                    </div>
-                </div>
-            </div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 1</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 2</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 3</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 4</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 5</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 6</p><span>900 × 480px</span></div></div></div>
         </div>
     </section>
 
@@ -201,14 +165,13 @@
     <!-- ========== RESTAURANT LOCATOR MAP ========== -->
     <section class="map-section" id="restaurants">
         <div class="map-container">
-            <!-- Map placeholder - UiTM Kedah location -->
             <div class="map-placeholder" id="homeMap">
                 <p>Map — UiTM Kedah</p>
                 <span>02600, Sungai Petani, Kedah Area</span>
             </div>
         </div>
         <div class="map-swatch">
-            <h4 class="map-title">Find a S</h4>
+            <h4 class="map-title">Find a Store</h4>
             <form class="map-form" id="locationForm" action="#" method="GET">
                 <input
                     class="map-input"
@@ -219,7 +182,7 @@
                 >
                 <button class="map-submit" type="submit" aria-label="Search">&#128205;</button>
             </form>
-            <p class="map-note">Nearest BK® to UiTM Kedah</p>
+            <p class="map-note">Nearest BTH® to UiTM Kedah</p>
         </div>
     </section>
 
@@ -245,11 +208,10 @@
     <footer id="footer">
         <div class="footer-bg">
             <div class="footer-links">
-
                 <div class="footer-col">
-                    <h4>BKC Info</h4>
+                    <h4>BTH Info</h4>
                     <ul>
-                        <li><a href="#about">About BK®</a></li>
+                        <li><a href="#about">About BTH®</a></li>
                         <li><a href="#story">Fresh Taste</a></li>
                         <li><a href="#menu">Made to Order</a></li>
                         <li><a href="#news">News &amp; Press</a></li>
@@ -257,35 +219,31 @@
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
-                    <h4>My BK</h4>
+                    <h4>My BTH</h4>
                     <ul>
-                        <li><a href="#restaurants">Your BK® Locator</a></li>
-                        <li><a href="#">Join the BK® Fan Kingdom</a></li>
+                        <li><a href="#restaurants">Your BTH® Locator</a></li>
+                        <li><a href="#">Join the BTH® Fan Kingdom</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Careers</h4>
                     <ul>
                         <li><a href="#careers">Opportunities</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
-                    <h4>BK Cares</h4>
+                    <h4>BTH Cares</h4>
                     <ul>
                         <li><a href="#privacy">Privacy</a></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="footer-bottom">
                 <div class="footer-brand">
-                    <div class="footer-logo">BURGER KING®</div>
-                    <p class="footer-copy">TM &amp; Copyright 2024 Burger King Corporation. All rights reserved.</p>
+                    <div class="footer-logo">BURGER TopHat®</div>
+                    <p class="footer-copy">TM &amp; Copyright 2024 Burger TopHat Corporation. All rights reserved.</p>
                     <p class="footer-location">Nearest Location: UiTM Kedah, Malaysia</p>
                 </div>
                 <div class="footer-social">
@@ -295,7 +253,6 @@
                     <a href="#" class="social-icon" aria-label="Email">@</a>
                 </div>
             </div>
-
         </div>
     </footer>
 
