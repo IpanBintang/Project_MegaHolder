@@ -159,8 +159,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 0 32px;
     height: 80px;
 }
