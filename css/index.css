@@ -1,6 +1,6 @@
 /* =========================================
-   BURGER TOPHAT® MALAYSIA — STYLESHEET
-   Assignment Draft | UiTM Kedah
+   BURGER TOPHAT® — INDEX.CSS
+   Shared base + Home page styles
    ========================================= */
 
 /* ---------- CSS RESET & BASE ---------- */
@@ -155,7 +155,6 @@ img {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
-/* KEY FIX: position:relative so the absolute logo centres against the full header width */
 .nav-container {
     position: relative;
     display: flex;
@@ -165,12 +164,10 @@ img {
     height: 80px;
 }
 
-/* ── Left nav links — no flex-grow, sits at left edge ── */
 .nav-left {
     display: flex;
     align-items: center;
     gap: 2px;
-    /* do NOT add flex:1 or margin:auto here */
 }
 
 .nav-link {
@@ -189,7 +186,6 @@ img {
     color: var(--bk-red);
 }
 
-/* ── "More ▾" dropdown button ── */
 .dropdown-wrapper {
     position: relative;
 }
@@ -238,13 +234,12 @@ img {
     color: var(--bk-red);
 }
 
-/* ── Centre logo: absolute so it doesn't affect left/right flow ── */
 .nav-center {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* let clicks pass through to links behind */
+    pointer-events: none;
 }
 
 .nav-center .logo-link {
@@ -264,9 +259,8 @@ img {
     transform: scale(1.07);
 }
 
-/* ── Right side: Order Now + hamburger — pushed to the right ── */
 .nav-right {
-    margin-left: auto;   /* pushes this block all the way to the right */
+    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -282,7 +276,6 @@ img {
     white-space: nowrap;
 }
 
-/* Mobile hamburger button */
 .mobile-header {
     display: none;
 }
@@ -312,6 +305,38 @@ img {
 }
 
 /* =========================================
+   BUTTONS
+   ========================================= */
+.bk-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    border: 2px solid transparent;
+}
+
+.bk-btn:hover {
+    opacity: 0.88;
+    transform: scale(1.03);
+}
+
+.bk-btn-orange {
+    background-color: var(--bk-cream);
+    color: var(--bk-red);
+    border-color: var(--bk-red);
+}
+
+.bk-btn-red {
+    background-color: var(--bk-red);
+    color: #ffffff;
+    border-color: var(--bk-red);
+}
+
+/* =========================================
    HERO CAROUSEL SECTION
    ========================================= */
 .hero {
@@ -328,15 +353,26 @@ img {
 .carousel-item {
     display: none;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 760px;
 }
 
 .carousel-item.active {
     display: block;
 }
 
+/* ── Hero image fix: fills full 760px height ── */
+.hero-img {
+    width: 100%;
+    height: 760px;
+    object-fit: cover;
+    display: block;
+}
+
 .hero-placeholder {
     width: 100%;
-    height: 420px;
+    height: 760px;
     background-color: #3a3a3a;
     display: flex;
     flex-direction: column;
@@ -363,12 +399,6 @@ img {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-}
-
-.carousel-item {
-    background-size: cover;
-    background-position: center;
-    height: 760px;
 }
 
 .carousel-btn {
@@ -414,38 +444,6 @@ img {
 
 .dot.active {
     background-color: var(--bk-orange);
-}
-
-/* =========================================
-   BUTTONS
-   ========================================= */
-.bk-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 24px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.15s ease, opacity 0.15s ease;
-    border: 2px solid transparent;
-}
-
-.bk-btn:hover {
-    opacity: 0.88;
-    transform: scale(1.03);
-}
-
-.bk-btn-orange {
-    background-color: var(--bk-cream);
-    color: var(--bk-red);
-    border-color: var(--bk-red);
-}
-
-.bk-btn-red {
-    background-color: var(--bk-red);
-    color: #ffffff;
-    border-color: var(--bk-red);
 }
 
 /* =========================================
@@ -851,7 +849,15 @@ footer {
         height: 68px;
     }
 
+    .hero-img {
+        height: 260px;
+    }
+
     .hero-placeholder {
+        height: 260px;
+    }
+
+    .carousel-item {
         height: 260px;
     }
 
