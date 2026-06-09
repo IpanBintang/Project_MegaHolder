@@ -365,6 +365,12 @@ img {
     text-align: center;
 }
 
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    height: 760px;
+}
+
 .carousel-btn {
     position: absolute;
     top: 50%;
