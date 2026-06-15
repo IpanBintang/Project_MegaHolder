@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Promotions — BURGER TopHat®</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/promotions.css">
+</head>
+
+<body>
+
+    <!-- ========== MOBILE NAVIGATION ========== -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="overlay"></div>
+        <div class="mobile-nav-content" id="mobileNavContent">
+            <div class="mobile-logo">
+                <img src="images/Santuy.png" alt="Burger TopHat Logo" class="mobile-logo-img" />
+            </div>
+            <span class="divider"></span>
+            <ul>
+                <li><a href="menu.html">Menu <span class="spacer"></span> ›</a></li>
+                <li><a href="index.html#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
+                <li><a href="promotion.html">Offers <span class="spacer"></span> ›</a></li>
+                <li><a href="promotion.html">Coupons <span class="spacer"></span> ›</a></li>
+                <li><a href="#">BK Delivery <span class="spacer"></span> ›</a></li>
+                <li class="has-menu">
+                    <a href="#" id="MobileMore">More <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileSubMenu">
+                        <ul>
+                            <li><a href="about.html">About BTH</a></li>
+                            <li><a href="#">Burger TopHat News</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== DESKTOP HEADER / NAVIGATION ========== -->
+    <header id="desktopHeader" class="desktop-header">
+        <nav class="nav-container" aria-label="Primary Navigation">
+
+            <div class="nav-left" id="navLeft">
+                <a href="menu.html"         class="nav-link">Menu</a>
+                <a href="index.html#restaurants" class="nav-link">Restaurants</a>
+                <a href="promotion.html"    class="nav-link">Offers</a>
+                <a href="promotion.html"    class="nav-link">Coupons</a>
+                <a href="#"                 class="nav-link">BK Delivery</a>
+                <div class="dropdown-wrapper">
+                    <button id="moreMenuBtn" class="nav-btn" aria-expanded="false">More ▾</button>
+                    <div id="moreDropdown" class="dropdown-menu" style="display:none;">
+                        <ul>
+                            <li><a href="about.html">About BTH</a></li>
+                            <li><a href="#">Burger TopHat News</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="menu.html" class="bk-btn bk-btn-red nav-order-btn">Order Now</a>
+                <div class="mobile-header" id="mobileHeader">
+                    <button id="mobileMenuBtn" aria-label="Open navigation menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ========== PROMO HERO BANNER ========== -->
+    <section class="promo-hero">
+        <span class="promo-hero-eyebrow">Limited Time Deals</span>
+        <h1>Hot <em>Promotions</em><br>Just for You</h1>
+        <p>Exclusive deals for students, festive celebrations &amp; more. Grab them before they're gone!</p>
+    </section>
+
+    <!-- ========== PROMOTIONS GRID ========== -->
+    <section class="promo-section" id="promotions">
+        <div class="promo-grid">
+
+            <!-- 1. Student Price -->
+            <div class="promo-card theme-student">
+                <div class="promo-card-header">
+                    <span class="promo-tag">Student Exclusive</span>
+                    <h2>Student<br>Price Deal</h2>
+                    <div class="promo-price">
+                        <sup>RM</sup>9<span>/ set</span>
+                    </div>
+                    <div class="promo-badge">
+                        <strong>SAVE</strong>
+                        UP TO<br>30%
+                    </div>
+                </div>
+                <div class="promo-card-body">
+                    <p>Flash your valid student ID and enjoy exclusive discounted pricing on selected BTH® sets. Available every day — because students deserve a great meal at a fair price.</p>
+                    <ul class="promo-conditions">
+                        <li>Valid student ID (MatriK / UiTM / any university) required at counter</li>
+                        <li>Applicable on selected sets &amp; combo meals</li>
+                        <li>Dine-in only, not valid with other promotions</li>
+                        <li>Available at BTH® nearest to UiTM Kedah</li>
+                    </ul>
+                    <a href="menu.html" class="bk-btn">View Student Menu</a>
+                </div>
+                <div class="promo-terms">
+                    <p>T&amp;C: One redemption per student per visit. Management reserves the right to verify student status. Valid until 31 December 2024.</p>
+                </div>
+            </div>
+
+            <!-- 2. Flash 50% — First 10 Customers -->
+            <div class="promo-card theme-flash">
+                <div class="promo-card-header">
+                    <span class="promo-tag">Flash Deal</span>
+                    <h2>50% Off<br>First 10 Customers</h2>
+                    <div class="promo-price">
+                        <sup>RM</sup>12<span>/ set</span>
+                    </div>
+                    <div class="promo-badge">
+                        <strong>50%</strong>
+                        OFF
+                    </div>
+                </div>
+                <div class="promo-card-body">
+                    <p>Be one of the first 10 customers at opening and score a massive 50% discount on your entire order. Early bird catches the burger!</p>
+                    <ul class="promo-conditions">
+                        <li>First 10 customers at store opening (10:00 AM) only</li>
+                        <li>Valid every Saturday &amp; Sunday</li>
+                        <li>Applicable on any item from the main menu</li>
+                        <li>Queue number issued at the counter — no reservations</li>
+                    </ul>
+                    <a href="menu.html" class="bk-btn">Order Now</a>
+                </div>
+                <div class="promo-terms">
+                    <p>T&amp;C: Limited to first 10 queue numbers per participating outlet per day. Cannot be combined with other discounts or vouchers.</p>
+                </div>
+            </div>
+
+            <!-- 3. Hari Gawai -->
+            <div class="promo-card theme-gawai">
+                <div class="promo-card-header">
+                    <span class="promo-tag">Hari Gawai 🌾</span>
+                    <h2>Gawai<br>Celebration Set</h2>
+                    <div class="promo-price">
+                        <sup>RM</sup>15<span>/ set for 2</span>
+                    </div>
+                    <div class="promo-badge">
+                        <strong>FEAST</strong>
+                        FOR 2
+                    </div>
+                </div>
+                <div class="promo-card-body">
+                    <p>Gayu Guru Gerai Nyamai! Celebrate the Dayak harvest festival with a special sharing set. Bring a friend and enjoy our Gawai bundle at a festive price.</p>
+                    <ul class="promo-conditions">
+                        <li>Available 1 – 7 June 2024</li>
+                        <li>Sharing set: 2 Whopper® Jr + 2 drinks + 1 large fries</li>
+                        <li>Dine-in &amp; takeaway</li>
+                        <li>Participating outlets only</li>
+                    </ul>
+                    <a href="menu.html" class="bk-btn">Get the Gawai Set</a>
+                </div>
+                <div class="promo-terms">
+                    <p>T&amp;C: Promotion period 1 June – 7 June 2024. Limited sets available daily. Valid at participating BTH® outlets only.</p>
+                </div>
+            </div>
+
+            <!-- 4. Hari Raya Aidiladha -->
+            <div class="promo-card theme-raya">
+                <div class="promo-card-header">
+                    <span class="promo-tag">Hari Raya Aidiladha 🌙</span>
+                    <h2>Raya Aidiladha<br>Family Feast</h2>
+                    <div class="promo-price">
+                        <sup>RM</sup>39<span>/ family set</span>
+                    </div>
+                    <div class="promo-badge">
+                        <strong>FAMILY</strong>
+                        SET
+                    </div>
+                </div>
+                <div class="promo-card-body">
+                    <p>Selamat Hari Raya Aidiladha! Mark the Day of Sacrifice with loved ones over a generous BTH® family feast. More togetherness, more flavour.</p>
+                    <ul class="promo-conditions">
+                        <li>Available 16 – 20 June 2024</li>
+                        <li>Family set: 4 Whopper® + 4 drinks + 2 large fries + 4 sundae cones</li>
+                        <li>Dine-in, takeaway &amp; delivery</li>
+                        <li>Halal certified, all BTH® outlets Malaysia</li>
+                    </ul>
+                    <a href="menu.html" class="bk-btn">Order Family Feast</a>
+                </div>
+                <div class="promo-terms">
+                    <p>T&amp;C: Promotion period 16 June – 20 June 2024. Set contents may vary by outlet. While stocks last.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== CTA STRIP ========== -->
+    <section class="promo-cta-strip">
+        <h3>Don't Miss Out</h3>
+        <p>Follow us on social media to be the first to know about new deals and flash promotions.</p>
+        <a href="#" class="bk-btn bk-btn-orange">Follow BTH® Now</a>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-bg">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>BTH Info</h4>
+                    <ul>
+                        <li><a href="index.html#about">About BTH®</a></li>
+                        <li><a href="index.html#story">Fresh Taste</a></li>
+                        <li><a href="menu.html">Made to Order</a></li>
+                        <li><a href="#">News &amp; Press</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>My BTH</h4>
+                    <ul>
+                        <li><a href="index.html#restaurants">Your BTH® Locator</a></li>
+                        <li><a href="#">Join the BTH® Fan Kingdom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="#">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>BTH Cares</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">BURGER TopHat®</div>
+                    <p class="footer-copy">TM &amp; Copyright 2024 Burger TopHat Corporation. All rights reserved.</p>
+                    <p class="footer-location">Nearest Location: UiTM Kedah, Malaysia</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="Email">@</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
