@@ -5,213 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <title>Menu | BURGER TopHat®</title>
+    <title>BURGER TopHat®</title>
    <link rel="stylesheet" type="text/css" href="css/index.css" />
-   <link rel="stylesheet" type="text/css" href="css/menu.css" />
-   <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;700&display=swap');
-
-        /* ── Dark Collab Tab ── */
-        .tab-btn-collab {
-            color: #8b0000 !important;
-            font-weight: 900 !important;
-            letter-spacing: 0.04em;
-        }
-        .tab-btn-collab.active {
-            color: #c0392b !important;
-            border-bottom-color: #c0392b !important;
-        }
-        .tab-btn-collab:hover { color: #c0392b !important; }
-
-        /* ── Collab section header ── */
-        #dark-collab {
-            background: #0a0a0a;
-            border-radius: 16px;
-            padding: 40px 32px 48px;
-            margin-bottom: 8px;
-        }
-        .collab-menu-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .collab-menu-eyebrow {
-            font-family: 'Cinzel', serif;
-            font-size: 0.68rem;
-            letter-spacing: 0.3em;
-            color: #888;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-        }
-        .collab-menu-title {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 2rem;
-            font-weight: 900;
-            color: #ffffff;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-            line-height: 1.1;
-        }
-        .collab-x { color: #c0392b; margin-right: 8px; }
-        .collab-menu-desc {
-            font-size: 0.95rem;
-            color: #aaa;
-            max-width: 560px;
-            margin: 0 auto 20px;
-            line-height: 1.65;
-        }
-        .collab-menu-desc strong { color: #e8ddd0; }
-        .collab-menu-link {
-            font-family: 'Cinzel', serif;
-            font-size: 0.78rem;
-            letter-spacing: 0.15em;
-            color: #c0392b;
-            text-decoration: none;
-            text-transform: uppercase;
-            border-bottom: 1px solid rgba(192,57,43,0.4);
-            padding-bottom: 2px;
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .collab-menu-link:hover { color: #e74c3c; border-color: #e74c3c; }
-
-        /* ── Collab Card Grid ── */
-        .collab-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .collab-card {
-            background: #111111;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(139,0,0,0.25);
-            transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
-        }
-        .collab-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 32px rgba(139,0,0,0.3);
-            border-color: rgba(192,57,43,0.55);
-        }
-
-        /* Image placeholder — dark tone */
-        .collab-card-img {
-            width: 100%;
-            height: 170px;
-            background: linear-gradient(135deg, #1a0a0a 60%, #2a0d0d);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            border-bottom: 1px solid rgba(139,0,0,0.3);
-            color: #555;
-        }
-        .collab-card-img p { font-size: 0.78rem; font-weight: bold; color: #444; }
-        .collab-card-img span { font-size: 0.68rem; color: #333; margin-top: 3px; }
-        .collab-card-number {
-            position: absolute;
-            top: 10px; left: 14px;
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 0.85rem;
-            color: rgba(192,57,43,0.5);
-            font-weight: 900;
-        }
-
-        .collab-card-body { padding: 16px; }
-
-        .collab-card-badge {
-            display: inline-block;
-            font-size: 0.62rem;
-            font-weight: 900;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #c0392b;
-            border: 1px solid rgba(192,57,43,0.4);
-            border-radius: 10px;
-            padding: 2px 10px;
-            margin-bottom: 10px;
-        }
-        .collab-card-name {
-            font-family: 'Cinzel', serif;
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: #e8ddd0;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            margin-bottom: 8px;
-        }
-        .collab-card-desc {
-            font-size: 0.8rem;
-            color: #888;
-            line-height: 1.55;
-            margin-bottom: 10px;
-        }
-        .collab-card-tag {
-            display: inline-block;
-            font-size: 0.68rem;
-            color: #555;
-            border: 1px solid #2a2a2a;
-            border-radius: 10px;
-            padding: 2px 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* CTA card */
-        .collab-card-cta {
-            background: linear-gradient(135deg, #1a0000 0%, #2d0000 100%);
-            border-color: rgba(192,57,43,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .collab-cta-inner { text-align: center; padding: 24px; }
-        .collab-cta-icon {
-            font-size: 2rem;
-            color: #c0392b;
-            margin-bottom: 12px;
-            display: block;
-        }
-        .collab-cta-title {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1rem;
-            font-weight: 900;
-            color: #e8ddd0;
-            margin-bottom: 8px;
-        }
-        .collab-cta-sub {
-            font-size: 0.8rem;
-            color: #888;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        .collab-cta-btn {
-            display: inline-block;
-            font-family: 'Cinzel', serif;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #fff;
-            background: #8b0000;
-            border: 1px solid #c0392b;
-            border-radius: 6px;
-            padding: 10px 20px;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-        .collab-cta-btn:hover { background: #c0392b; }
-
-        /* Responsive */
-        @media screen and (max-width: 900px) {
-            .collab-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media screen and (max-width: 560px) {
-            .collab-grid { grid-template-columns: 1fr; }
-            .collab-menu-title { font-size: 1.4rem; }
-            #dark-collab { padding: 24px 16px 32px; }
-        }
-   </style> 
+</head>
 
 <body>
 
@@ -225,19 +21,20 @@
             <span class="divider"></span>
             <ul>
                 <li><a href="menu.html">Menu <span class="spacer"></span> ›</a></li>
-                <li><a href="index.html#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
-                <li><a href="index.html#offers">Offers <span class="spacer"></span> ›</a></li>
-                <li><a href="index.html#offers">Coupons <span class="spacer"></span> ›</a></li>
+                <li><a href="#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
+                <li><a href="promotion.html">Offers <span class="spacer"></span> ›</a></li>
+                <li><a href="#offers">Coupons <span class="spacer"></span> ›</a></li>
                 <li><a href="#">BK Delivery <span class="spacer"></span> ›</a></li>
+                <li><a href="collab.html" style="color:#c0392b;font-weight:900;">✕ Dark Collab <span class="spacer"></span> ›</a></li>
                 <li class="has-menu">
                     <a href="#" id="MobileMore">More <span class="spacer"></span> ▾</a>
                     <div class="sub-menu" id="mobileSubMenu">
                         <ul>
                             <li><a href="about.html">About BTH</a></li>
-                            <li><a href="index.html#news">Burger TopHat News</a></li>
-                            <li><a href="index.html#careers">Careers</a></li>
-                            <li><a href="index.html#contact">Contact Us</a></li>
-                            <li><a href="index.html#privacy">Privacy</a></li>
+                            <li><a href="#news">Burger TopHat News</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
                         </ul>
                     </div>
                 </li>
@@ -250,34 +47,35 @@
         <nav class="nav-container" aria-label="Primary Navigation">
 
             <div class="nav-left" id="navLeft">
-                <a href="menu.html"              class="nav-link">Menu</a>
-                <a href="index.html#restaurants" class="nav-link">Restaurants</a>
-                <a href="index.html#offers"      class="nav-link">Offers</a>
-                <a href="index.html#offers"      class="nav-link">Coupons</a>
-                <a href="#"                      class="nav-link">BK Delivery</a>
+                <a href="menu.html"        class="nav-link">Menu</a>
+                <a href="#restaurants" class="nav-link">Restaurants</a>
+                <a href="promotion.html"      class="nav-link">Offers</a>
+                <a href="promotion.html"      class="nav-link">Coupons</a>
+                <a href="#"            class="nav-link">BK Delivery</a>
                 <div class="dropdown-wrapper">
                     <button id="moreMenuBtn" class="nav-btn" aria-expanded="false">More ▾</button>
                     <div id="moreDropdown" class="dropdown-menu" style="display:none;">
                         <ul>
                             <li><a href="about.html">About BTH</a></li>
-                            <li><a href="index.html#news">Burger TopHat News</a></li>
-                            <li><a href="index.html#careers">Careers</a></li>
-                            <li><a href="index.html#contact">Contact Us</a></li>
-                            <li><a href="index.html#privacy">Privacy</a></li>
+                            <li><a href="#news">Burger TopHat News</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="nav-center">
-                <a href="index.html" class="logo-link">
+                <a href="#" class="logo-link">
                     <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
                 </a>
             </div>
 
             <div class="nav-right">
-                <a href="collab.html" class="nav-collab-btn" style="display:inline-flex;align-items:center;font-size:0.8rem;font-weight:900;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;color:#c0392b;border:1.5px solid rgba(192,57,43,0.5);border-radius:6px;padding:8px 14px;white-space:nowrap;">✕ Dark Collab</a>
+                <a href="collab.html" class="nav-link-collab nav-collab-btn">✕ Dark Collab</a>
                 <a href="menu.html" class="bk-btn bk-btn-red nav-order-btn">Order Now</a>
+                <!-- Mobile hamburger button -->
                 <div class="mobile-header" id="mobileHeader">
                     <button id="mobileMenuBtn" aria-label="Open navigation menu">
                         <span class="hamburger-line"></span>
@@ -290,289 +88,126 @@
         </nav>
     </header>
 
-    <!-- ========== MENU HERO ========== -->
-    <section class="menu-hero">
-        <h1 class="menu-hero-title">Our Menu</h1>
-        <p class="menu-hero-sub">Flame-grilled. Freshly prepared. Made to order.</p>
+    <!-- ========== HERO / BANNER CAROUSEL ========== -->
+   <section class="hero" id="home">
+    <div class="hero-carousel" id="heroCarousel">
+
+        <!-- Slide 1 — with banner image -->
+        <div class="carousel-item active">
+            <img src="images/collab.jpeg" alt="Hero Banner Slide 1" class="hero-img">
+            <div class="carousel-content">
+                <a href="menu.html" class="bk-btn bk-btn-orange">Check It Out</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="hero-placeholder">
+                <p>Hero Banner Slide 2</p>
+                <span>1800 × 760px</span>
+            </div>
+            <div class="carousel-content">
+                <a href="#offers" class="bk-btn bk-btn-orange">Check It Out</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="hero-placeholder">
+                <p>Hero Banner Slide 3</p>
+                <span>1800 × 760px</span>
+            </div>
+            <div class="carousel-content">
+                <a href="#menu" class="bk-btn bk-btn-orange">Check It Out</a>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+    <button class="carousel-btn next" id="nextBtn" aria-label="Next slide">&#10095;</button>
+    <div class="carousel-dots" id="carouselDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+    <!-- ========== OFFERS / PROMO GRID ========== -->
+    <section class="offer-grid" id="offers">
+        <div class="offer-items">
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 1</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 2</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 3</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 4</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 5</p><span>900 × 480px</span></div></div></div>
+            <div class="offer-banner"><div class="inner"><div class="img-placeholder"><p>Offer Banner 6</p><span>900 × 480px</span></div></div></div>
+        </div>
     </section>
 
-    <!-- ========== CATEGORY TABS ========== -->
-    <nav class="menu-tabs" aria-label="Menu categories">
-        <div class="menu-tabs-inner">
-            <button class="tab-btn active" data-tab="fish-o-flip">Fish O Flip</button>
-            <button class="tab-btn" data-tab="tophat-deluxe">TopHat Deluxe</button>
-            <button class="tab-btn" data-tab="classic-deluxe">Classic Deluxe</button>
-            <button class="tab-btn tab-btn-collab" data-tab="dark-collab">✕ Dark Collab</button>
+    <!-- ========== BRAND / CRM SECTION ========== -->
+    <section class="crm-section" id="about">
+        <div class="crm-content">
+            <div class="crm-left">
+                <h2 class="crm-title">SUPERIOR TASTE<br>YOUR WAY, SINCE YESTERDAY</h2>
+                <div class="crm-body">
+                    <p>WE FRESHLY <strong>FLAME-GRILL</strong> OUR <strong>BURGERS</strong></p>
+                    <p>WE USE <strong>FRESH INGREDIENTS</strong>, FRESHLY CHOPPED AND SLICED</p>
+                    <p>WE SOURCE THE <strong>BEST PARTNERS</strong> TO MAKE SURE WE GET THE <strong>BEST INGREDIENTS</strong></p>
+                    <p>WE STACK <strong>BIG, BOLD FLAVORS</strong> IN <strong>GREAT PORTIONS</strong></p>
+                </div>
+            </div>
+            <div class="crm-right">
+                <h2 class="crm-title">JOIN THE <em>BTH</em>® FAN KINGDOM</h2>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Facebook</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">Twitter</a>
+                </div>
+                <p class="crm-tagline">Follow your taste buds</p>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- ========== MENU BODY ========== -->
-    <main class="menu-body">
-
-        <!-- FISH O FLIP -->
-        <section class="menu-section active" id="fish-o-flip">
-            <h2 class="menu-section-title">Fish O Flip</h2>
-            <p class="menu-section-desc">Crispy, golden fish — flipped fresh for every order.</p>
-            <div class="menu-grid">
-                <div class="menu-card">
-                    <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                    <div class="menu-card-body">
-                        <p class="menu-card-name">Fish O Flip</p>
-                        <span class="menu-card-tag">Fish</span><br>
-                        <span class="menu-card-coming">Coming Soon</span>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                    <div class="menu-card-body">
-                        <p class="menu-card-name">Fish O Flip Meal</p>
-                        <span class="menu-card-tag">Fish</span><br>
-                        <span class="menu-card-coming">Coming Soon</span>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                    <div class="menu-card-body">
-                        <p class="menu-card-name">Fish O Flip Double</p>
-                        <span class="menu-card-tag">Fish</span><br>
-                        <span class="menu-card-coming">Coming Soon</span>
-                    </div>
-                </div>
+    <!-- ========== RESTAURANT LOCATOR MAP ========== -->
+    <section class="map-section" id="restaurants">
+        <div class="map-container">
+            <div class="map-placeholder" id="homeMap">
+                <p>Map — UiTM Kedah</p>
+                <span>02600, Sungai Petani, Kedah Area</span>
             </div>
-        </section>
+        </div>
+        <div class="map-swatch">
+            <h4 class="map-title">Find a Store</h4>
+            <form class="map-form" id="locationForm" action="#" method="GET">
+                <input
+                    class="map-input"
+                    type="text"
+                    name="locationSearch"
+                    placeholder="Enter address, city or postcode"
+                    aria-label="Search location"
+                >
+                <button class="map-submit" type="submit" aria-label="Search">&#128205;</button>
+            </form>
+            <p class="map-note">Nearest BTH® to UiTM Kedah</p>
+        </div>
+    </section>
 
-        <!-- TOPHAT DELUXE -->
-        <section class="menu-section" id="tophat-deluxe">
-            <h2 class="menu-section-title">TopHat Deluxe</h2>
-            <p class="menu-section-desc">Our signature flame-grilled stack — bold, big, and built to impress.</p>
-            <div class="menu-grid">
-                <div class="menu-card">
-                    <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                    <div class="menu-card-body">
-                        <p class="menu-card-name">TopHat Deluxe</p>
-                        <span class="menu-card-tag">Signature</span><br>
-                        <span class="menu-card-coming">Coming Soon</span>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                    <div class="menu-card-body">
-                        <p class="menu-card-name">TopHat Deluxe Meal</p>
-                        <span class="menu-card-tag">Signature</span><br>
-                        <span class="menu-card-coming">Coming Soon</span>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                    <div class="menu-card-body">
-                        <p class="menu-card-name">TopHat Deluxe Double</p>
-                        <span class="menu-card-tag">Signature</span><br>
-                        <span class="menu-card-coming">Coming Soon</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- ========== OUR STORY SECTION ========== -->
+    <section class="our-story" id="story">
+        <div class="story-content">
+            <h3 class="section-title">SINCE 1954</h3>
+            <h4 class="section-subtitle">60 years of our flame-grilled,<br>freshly prepared tradition goes into every order.</h4>
+            <a href="#" class="bk-btn bk-btn-orange">Read Our Story</a>
+        </div>
+    </section>
 
-        <!-- CLASSIC DELUXE -->
-        <section class="menu-section" id="classic-deluxe">
-            <h2 class="menu-section-title">Classic Deluxe</h2>
-            <p class="menu-section-desc">The classics, done right. Choose your protein.</p>
-
-            <!-- Beef -->
-            <div class="menu-sub-group">
-                <span class="menu-sub-label">Beef</span>
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Beef</p>
-                            <span class="menu-card-tag">Beef</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Beef Meal</p>
-                            <span class="menu-card-tag">Beef</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Beef Double</p>
-                            <span class="menu-card-tag">Beef</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chicken -->
-            <div class="menu-sub-group">
-                <span class="menu-sub-label">Chicken</span>
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Chicken</p>
-                            <span class="menu-card-tag">Chicken</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Chicken Meal</p>
-                            <span class="menu-card-tag">Chicken</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Chicken Crispy</p>
-                            <span class="menu-card-tag">Chicken</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fish -->
-            <div class="menu-sub-group">
-                <span class="menu-sub-label">Fish</span>
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Fish</p>
-                            <span class="menu-card-tag">Fish</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Fish Meal</p>
-                            <span class="menu-card-tag">Fish</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="menu-card-img"><p>Item Image</p><span>400 × 340px</span></div>
-                        <div class="menu-card-body">
-                            <p class="menu-card-name">Classic Deluxe Fish Double</p>
-                            <span class="menu-card-tag">Fish</span><br>
-                            <span class="menu-card-coming">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DARK COLLAB -->
-        <section class="menu-section" id="dark-collab">
-            <div class="collab-menu-header">
-                <div class="collab-menu-eyebrow">LIMITED EDITION · OCT – DEC 2024</div>
-                <h2 class="collab-menu-title"><span class="collab-x">✕</span> DARK COLLAB MENU</h2>
-                <p class="collab-menu-desc">A darkly delicious collaboration between Burger TopHat® and <strong>MYSTIKS</strong> Horror Journalism. Same trusted ingredients — a whole new darkness.</p>
-                <a href="collab.html" class="collab-menu-link">Explore the Full Collab ›</a>
-            </div>
-
-            <div class="collab-grid">
-
-                <div class="collab-card">
-                    <div class="collab-card-img">
-                        <div class="collab-card-number">I</div>
-                        <p>Crimson Whopper</p><span>400 × 340px</span>
-                    </div>
-                    <div class="collab-card-body">
-                        <span class="collab-card-badge">SIGNATURE DROP</span>
-                        <p class="collab-card-name">THE CRIMSON WHOPPER</p>
-                        <p class="collab-card-desc">Flame-grilled beef, blood-red beetroot bun, black garlic aioli, smoked jalapeño relish.</p>
-                        <span class="collab-card-tag">Beef · Limited</span>
-                    </div>
-                </div>
-
-                <div class="collab-card">
-                    <div class="collab-card-img">
-                        <div class="collab-card-number">II</div>
-                        <p>Void Chicken</p><span>400 × 340px</span>
-                    </div>
-                    <div class="collab-card-body">
-                        <span class="collab-card-badge">FAN FAVOURITE</span>
-                        <p class="collab-card-name">THE VOID CHICKEN</p>
-                        <p class="collab-card-desc">Crispy charcoal-dusted chicken, ash-black bun, sriracha ghost pepper sauce.</p>
-                        <span class="collab-card-tag">Chicken · Limited</span>
-                    </div>
-                </div>
-
-                <div class="collab-card">
-                    <div class="collab-card-img">
-                        <div class="collab-card-number">III</div>
-                        <p>Obsidian Fish</p><span>400 × 340px</span>
-                    </div>
-                    <div class="collab-card-body">
-                        <span class="collab-card-badge">NEW ARRIVAL</span>
-                        <p class="collab-card-name">THE OBSIDIAN FISH</p>
-                        <p class="collab-card-desc">Golden fish fillet, squid ink bun, smoky tartare, pickled red onion, dark dill.</p>
-                        <span class="collab-card-tag">Fish · Limited</span>
-                    </div>
-                </div>
-
-                <div class="collab-card">
-                    <div class="collab-card-img">
-                        <div class="collab-card-number">IV</div>
-                        <p>Shadow Fries</p><span>400 × 340px</span>
-                    </div>
-                    <div class="collab-card-body">
-                        <span class="collab-card-badge">SIDE</span>
-                        <p class="collab-card-name">SHADOW FRIES</p>
-                        <p class="collab-card-desc">Activated charcoal-dusted crinkle fries with crimson chilli dipping sauce.</p>
-                        <span class="collab-card-tag">Sides · Limited</span>
-                    </div>
-                </div>
-
-                <div class="collab-card">
-                    <div class="collab-card-img">
-                        <div class="collab-card-number">V</div>
-                        <p>Midnight Sundae</p><span>400 × 340px</span>
-                    </div>
-                    <div class="collab-card-body">
-                        <span class="collab-card-badge">DESSERT</span>
-                        <p class="collab-card-name">MIDNIGHT SUNDAE</p>
-                        <p class="collab-card-desc">Dark cocoa soft serve, blackcurrant coulis, crushed dark chocolate shards.</p>
-                        <span class="collab-card-tag">Dessert · Limited</span>
-                    </div>
-                </div>
-
-                <div class="collab-card collab-card-cta">
-                    <div class="collab-cta-inner">
-                        <div class="collab-cta-icon">✕</div>
-                        <p class="collab-cta-title">BTH × MYSTIKS</p>
-                        <p class="collab-cta-sub">Dive deeper into the dark lore behind every item.</p>
-                        <a href="collab.html" class="collab-cta-btn">View the Full Collab</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <script>
-        // Tab switching for menu categories
-        document.querySelectorAll('.tab-btn').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-                document.querySelectorAll('.menu-section').forEach(function(s) { s.classList.remove('active'); });
-                btn.classList.add('active');
-                document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
-            });
-        });
-    </script>
+    <!-- ========== MADE TO ORDER SECTION ========== -->
+    <section class="made-to-order" id="menu">
+        <div class="mto-content">
+            <h3 class="section-title">MADE TO ORDER</h3>
+            <h4 class="section-subtitle">Every WHOPPER® Sandwich<br>is made to order.</h4>
+            <a href="#" class="bk-btn bk-btn-orange">Take a Look</a>
+        </div>
+    </section>
 
     <!-- ========== FOOTER ========== -->
     <footer id="footer">
@@ -581,31 +216,31 @@
                 <div class="footer-col">
                     <h4>BTH Info</h4>
                     <ul>
-                        <li><a href="about.html">About BTH®</a></li>
-                        <li><a href="index.html#story">Fresh Taste</a></li>
-                        <li><a href="menu.html">Made to Order</a></li>
-                        <li><a href="index.html#news">News &amp; Press</a></li>
-                        <li><a href="index.html#legal">Legal</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#about">About BTH®</a></li>
+                        <li><a href="#story">Fresh Taste</a></li>
+                        <li><a href="#menu">Made to Order</a></li>
+                        <li><a href="#news">News &amp; Press</a></li>
+                        <li><a href="#legal">Legal</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>My BTH</h4>
                     <ul>
-                        <li><a href="index.html#restaurants">Your BTH® Locator</a></li>
+                        <li><a href="#restaurants">Your BTH® Locator</a></li>
                         <li><a href="#">Join the BTH® Fan Kingdom</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Careers</h4>
                     <ul>
-                        <li><a href="index.html#careers">Opportunities</a></li>
+                        <li><a href="#careers">Opportunities</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>BTH Cares</h4>
                     <ul>
-                        <li><a href="index.html#privacy">Privacy</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
                     </ul>
                 </div>
             </div>
