@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Feedback | BURGER TopHat®</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/feedback.css" />
+
+    <!-- Firebase SDK (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+</head>
+
+<body>
+
+    <!-- ========== MOBILE NAVIGATION ========== -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="overlay"></div>
+        <div class="mobile-nav-content" id="mobileNavContent">
+            <div class="mobile-logo">
+                <img src="images/Santuy.png" alt="Burger TopHat Logo" class="mobile-logo-img" />
+            </div>
+            <span class="divider"></span>
+            <ul>
+                <li><a href="menu.html">Menu <span class="spacer"></span> ›</a></li>
+                <li><a href="#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
+                <li><a href="promotion.html">Offers <span class="spacer"></span> ›</a></li>
+                <li><a href="promotion.html">Coupons <span class="spacer"></span> ›</a></li>
+                <li><a href="#">BK Delivery <span class="spacer"></span> ›</a></li>
+                <li><a href="collab.html" style="color:#c0392b;font-weight:900;">✕ Dark Collab <span class="spacer"></span> ›</a></li>
+                <li class="has-menu">
+                    <a href="#" id="MobileMore">More <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileSubMenu">
+                        <ul>
+                            <li><a href="about.html">About BTH</a></li>
+                            <li><a href="#news">Burger TopHat News</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== DESKTOP HEADER / NAVIGATION ========== -->
+    <header id="desktopHeader" class="desktop-header">
+        <nav class="nav-container" aria-label="Primary Navigation">
+
+            <div class="nav-left" id="navLeft">
+                <a href="menu.html"        class="nav-link">Menu</a>
+                <a href="#restaurants" class="nav-link">Restaurants</a>
+                <a href="promotion.html"      class="nav-link">Offers</a>
+                <a href="promotion.html"      class="nav-link">Coupons</a>
+                <a href="#"            class="nav-link">BK Delivery</a>
+                <a href="collab.html"  class="nav-link nav-link-collab">✕ Dark Collab</a>
+                <div class="dropdown-wrapper">
+                    <button id="moreMenuBtn" class="nav-btn" aria-expanded="false">More ▾</button>
+                    <div id="moreDropdown" class="dropdown-menu" style="display:none;">
+                        <ul>
+                            <li><a href="about.html">About BTH</a></li>
+                            <li><a href="#news">Burger TopHat News</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="menu.html" class="bk-btn bk-btn-red nav-order-btn">Order Now</a>
+                <div class="mobile-header" id="mobileHeader">
+                    <button id="mobileMenuBtn" aria-label="Open navigation menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="fb-hero">
+        <div class="fb-hero-inner">
+            <p class="fb-hero-eyebrow">YOUR VOICE MATTERS</p>
+            <h1 class="fb-hero-title">Tell Us What You Think</h1>
+            <p class="fb-hero-sub">Share your BTH® experience — good, great, or something we can improve. Every bite of feedback makes us better.</p>
+        </div>
+    </section>
+
+    <!-- ========== STATS STRIP ========== -->
+    <div class="fb-stats-strip">
+        <div class="fb-stat">
+            <span class="fb-stat-num" id="statTotal">—</span>
+            <span class="fb-stat-label">Reviews Submitted</span>
+        </div>
+        <div class="fb-stat-divider"></div>
+        <div class="fb-stat">
+            <span class="fb-stat-num" id="statAvg">—</span>
+            <span class="fb-stat-label">Average Rating</span>
+        </div>
+        <div class="fb-stat-divider"></div>
+        <div class="fb-stat">
+            <span class="fb-stat-num" id="statRecent">—</span>
+            <span class="fb-stat-label">This Week</span>
+        </div>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="fb-main">
+
+        <!-- ── LEFT: Submission Form ── -->
+        <aside class="fb-sidebar">
+            <div class="fb-form-card">
+                <h2 class="fb-form-title">Leave Your Feedback</h2>
+
+                <!-- Auth gate shown when logged out -->
+                <div id="fbAuthGate" class="fb-auth-gate">
+                    <p>Sign in to share your experience with us.</p>
+                    <div class="fb-gate-btns">
+                        <button class="bk-btn bk-btn-red" onclick="openAuthModal('login')">Sign In</button>
+                        <button class="bk-btn bk-btn-orange" onclick="openAuthModal('register')">Register</button>
+                    </div>
+                </div>
+
+                <!-- Form shown when logged in -->
+                <div id="fbForm" style="display:none;">
+                    <!-- Auth bar inside form -->
+                    <div class="fb-user-bar" id="fbUserBar">
+                        <span class="fb-user-name" id="fbUserName"></span>
+                        <button class="fb-signout-btn" onclick="signOut()">Sign Out</button>
+                    </div>
+
+                    <!-- Visit type -->
+                    <div class="fb-field-group">
+                        <label class="fb-label">Visit Type</label>
+                        <div class="fb-chip-group" id="visitTypeGroup">
+                            <button class="fb-chip active" data-value="dine-in"   onclick="selectChip(this, 'visitTypeGroup')">Dine In</button>
+                            <button class="fb-chip"        data-value="takeaway"  onclick="selectChip(this, 'visitTypeGroup')">Takeaway</button>
+                            <button class="fb-chip"        data-value="delivery"  onclick="selectChip(this, 'visitTypeGroup')">Delivery</button>
+                            <button class="fb-chip"        data-value="drive-thru" onclick="selectChip(this, 'visitTypeGroup')">Drive-Thru</button>
+                        </div>
+                    </div>
+
+                    <!-- Overall rating stars -->
+                    <div class="fb-field-group">
+                        <label class="fb-label">Overall Rating</label>
+                        <div class="fb-stars" id="starRating" role="group" aria-label="Star rating">
+                            <button class="fb-star" data-val="1" onclick="setRating(1)" aria-label="1 star">★</button>
+                            <button class="fb-star" data-val="2" onclick="setRating(2)" aria-label="2 stars">★</button>
+                            <button class="fb-star" data-val="3" onclick="setRating(3)" aria-label="3 stars">★</button>
+                            <button class="fb-star" data-val="4" onclick="setRating(4)" aria-label="4 stars">★</button>
+                            <button class="fb-star" data-val="5" onclick="setRating(5)" aria-label="5 stars">★</button>
+                        </div>
+                        <span class="fb-rating-label" id="ratingLabel">Tap to rate</span>
+                    </div>
+
+                    <!-- Category sliders -->
+                    <div class="fb-field-group">
+                        <label class="fb-label">Rate Each Area</label>
+                        <div class="fb-slider-row">
+                            <span class="fb-slider-name">Food Quality</span>
+                            <input type="range" class="fb-slider" id="slFood" min="1" max="5" value="3" oninput="updateSliderLabel('slFood','slFoodVal')">
+                            <span class="fb-slider-val" id="slFoodVal">3/5</span>
+                        </div>
+                        <div class="fb-slider-row">
+                            <span class="fb-slider-name">Service</span>
+                            <input type="range" class="fb-slider" id="slService" min="1" max="5" value="3" oninput="updateSliderLabel('slService','slServiceVal')">
+                            <span class="fb-slider-val" id="slServiceVal">3/5</span>
+                        </div>
+                        <div class="fb-slider-row">
+                            <span class="fb-slider-name">Cleanliness</span>
+                            <input type="range" class="fb-slider" id="slClean" min="1" max="5" value="3" oninput="updateSliderLabel('slClean','slCleanVal')">
+                            <span class="fb-slider-val" id="slCleanVal">3/5</span>
+                        </div>
+                        <div class="fb-slider-row">
+                            <span class="fb-slider-name">Value</span>
+                            <input type="range" class="fb-slider" id="slValue" min="1" max="5" value="3" oninput="updateSliderLabel('slValue','slValueVal')">
+                            <span class="fb-slider-val" id="slValueVal">3/5</span>
+                        </div>
+                    </div>
+
+                    <!-- Title -->
+                    <div class="fb-field-group">
+                        <label class="fb-label" for="fbTitle">Review Title</label>
+                        <input type="text" class="fb-input" id="fbTitle" placeholder="e.g. Best Whopper I've had!" maxlength="80" />
+                    </div>
+
+                    <!-- Body -->
+                    <div class="fb-field-group">
+                        <label class="fb-label" for="fbBody">Your Review</label>
+                        <textarea class="fb-textarea" id="fbBody" placeholder="Tell us about your visit — what did you love, or what can we do better?" maxlength="1000"></textarea>
+                        <span class="fb-char-count" id="fbCharCount">0 / 1000</span>
+                    </div>
+
+                    <!-- Would recommend -->
+                    <div class="fb-field-group fb-recommend-row">
+                        <label class="fb-label">Would you recommend BTH® to a friend?</label>
+                        <div class="fb-chip-group" id="recommendGroup">
+                            <button class="fb-chip active" data-value="yes" onclick="selectChip(this, 'recommendGroup')">👍 Yes</button>
+                            <button class="fb-chip"        data-value="no"  onclick="selectChip(this, 'recommendGroup')">👎 No</button>
+                        </div>
+                    </div>
+
+                    <div class="fb-form-error" id="fbError"></div>
+
+                    <button class="bk-btn bk-btn-red fb-submit-btn" id="fbSubmitBtn" onclick="submitFeedback()">
+                        Submit Feedback
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick categories legend -->
+            <div class="fb-legend-card">
+                <h3 class="fb-legend-title">Browse by Topic</h3>
+                <div class="fb-legend-pills">
+                    <button class="fb-filter-pill active" data-cat="all"      onclick="filterFeed('all', this)">All</button>
+                    <button class="fb-filter-pill"        data-cat="dine-in"  onclick="filterFeed('dine-in', this)">Dine In</button>
+                    <button class="fb-filter-pill"        data-cat="takeaway" onclick="filterFeed('takeaway', this)">Takeaway</button>
+                    <button class="fb-filter-pill"        data-cat="delivery" onclick="filterFeed('delivery', this)">Delivery</button>
+                    <button class="fb-filter-pill"        data-cat="drive-thru" onclick="filterFeed('drive-thru', this)">Drive-Thru</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ── RIGHT: Reviews Feed ── -->
+        <section class="fb-feed">
+            <div class="fb-feed-header">
+                <h2 class="fb-feed-title">Customer Reviews</h2>
+                <div class="fb-sort-row">
+                    <button class="fb-sort-btn active" id="sortNew" onclick="setSort('new', this)">Newest</button>
+                    <button class="fb-sort-btn"        id="sortTop" onclick="setSort('top', this)">Highest Rated</button>
+                </div>
+            </div>
+
+            <div id="fbReviews" class="fb-reviews-list">
+                <div class="fb-loading">Loading reviews&hellip;</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-bg">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>BTH Info</h4>
+                    <ul>
+                        <li><a href="about.html">About BTH®</a></li>
+                        <li><a href="index.html#story">Fresh Taste</a></li>
+                        <li><a href="index.html#menu">Made to Order</a></li>
+                        <li><a href="#news">News &amp; Press</a></li>
+                        <li><a href="#legal">Legal</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>My BTH</h4>
+                    <ul>
+                        <li><a href="index.html#restaurants">Your BTH® Locator</a></li>
+                        <li><a href="#">Join the BTH® Fan Kingdom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="#careers">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>BTH Cares</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">BURGER TopHat®</div>
+                    <p class="footer-copy">TM &amp; Copyright 2024 Burger TopHat Corporation. All rights reserved.</p>
+                    <p class="footer-location">Nearest Location: UiTM Kedah, Malaysia</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="Email">@</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== AUTH MODAL ========== -->
+    <div id="authOverlay" class="auth-overlay" onclick="closeAuthModal(event)">
+        <div class="auth-modal">
+            <div class="auth-modal-tabs">
+                <button class="auth-modal-tab active" id="tabLogin"    onclick="switchAuthTab('login')">Sign In</button>
+                <button class="auth-modal-tab"         id="tabRegister" onclick="switchAuthTab('register')">Register</button>
+                <button class="auth-modal-close"       onclick="closeAuthModal()" title="Close">&#10005;</button>
+            </div>
+
+            <div id="authPanelLogin" class="auth-panel">
+                <p class="auth-panel-hint">Welcome back. Sign in to leave your review.</p>
+                <div class="auth-fields">
+                    <input type="email"    id="loginEmail"    class="auth-input" placeholder="Email address" />
+                    <input type="password" id="loginPassword" class="auth-input" placeholder="Password" />
+                    <div class="auth-error" id="loginError"></div>
+                    <button class="auth-submit" id="loginBtn" onclick="doLogin()">Sign In</button>
+                </div>
+                <p class="auth-switch-hint">No account? <button class="auth-link-btn" onclick="switchAuthTab('register')">Register here</button></p>
+            </div>
+
+            <div id="authPanelRegister" class="auth-panel" style="display:none">
+                <p class="auth-panel-hint">Create an account to submit and vote on reviews.</p>
+                <div class="auth-fields">
+                    <input type="text"     id="regUsername" class="auth-input" placeholder="Display name (shown on reviews)" maxlength="30" />
+                    <input type="email"    id="regEmail"    class="auth-input" placeholder="Email address" />
+                    <input type="password" id="regPassword" class="auth-input" placeholder="Password (min 6 characters)" />
+                    <div class="auth-error" id="regError"></div>
+                    <button class="auth-submit" id="regBtn" onclick="doRegister()">Create Account</button>
+                </div>
+                <p class="auth-switch-hint">Already registered? <button class="auth-link-btn" onclick="switchAuthTab('login')">Sign in</button></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="fb-toast"></div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/feedback.js"></script>
+</body>
+</html>
