@@ -882,3 +882,28 @@
         font-size: 1.5rem;
     }
 }
+
+.nav-collab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #c0392b;
+    border: 1.5px solid rgba(192,57,43,0.5);
+    border-radius: 6px;
+    padding: 8px 14px;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.nav-collab-btn:hover {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+}
+@media screen and (max-width: 768px) {
+    .nav-collab-btn { display: none; }
+}
