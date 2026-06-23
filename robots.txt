@@ -45,4 +45,4 @@ User-agent: SemrushBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://www.burgertophat.com/sitemap.xml
+Sitemap: https://ipanbintang.github.io/Project_MegaHolder/sitemap.xml
