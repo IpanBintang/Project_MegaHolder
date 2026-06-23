@@ -1,0 +1,48 @@
+# Burger TopHat® robots.txt
+# Last Updated: 23 December 2024
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /images/
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /*.js$
+Allow: /*.css$
+Crawl-delay: 0
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Specific rules for other bots
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots and scrapers
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.burgertophat.com/sitemap.xml
