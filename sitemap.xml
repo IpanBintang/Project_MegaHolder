@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home Page — Most Important -->
+  <url>
+    <loc>https://www.burgertophat.com/</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Menu Page -->
+  <url>
+    <loc>https://www.burgertophat.com/menu.html</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- Dark Collab Page — Limited Time, High Priority -->
+  <url>
+    <loc>https://www.burgertophat.com/collab.html</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Promotions Page — Changes Frequently -->
+  <url>
+    <loc>https://www.burgertophat.com/promotion.html</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- About BTH -->
+  <url>
+    <loc>https://www.burgertophat.com/about.html</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  
+  <!-- Feedback / Reviews Page -->
+  <url>
+    <loc>https://www.burgertophat.com/feedback.html</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://www.burgertophat.com/privacy.html</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>
