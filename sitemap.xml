@@ -3,7 +3,7 @@
   
   <!-- Home Page — Most Important -->
   <url>
-    <loc>https://www.burgertophat.com/</loc>
+    <loc>https://ipanbintang.github.io/Project_MegaHolder/</loc>
     <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
   
   <!-- Menu Page -->
   <url>
-    <loc>https://www.burgertophat.com/menu.html</loc>
+    <loc>https://ipanbintang.github.io/Project_MegaHolder/menu.html</loc>
     <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -19,7 +19,7 @@
   
   <!-- Dark Collab Page — Limited Time, High Priority -->
   <url>
-    <loc>https://www.burgertophat.com/collab.html</loc>
+    <loc>https://ipanbintang.github.io/Project_MegaHolder/collab.html</loc>
     <lastmod>2024-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
@@ -27,7 +27,7 @@
   
   <!-- Promotions Page — Changes Frequently -->
   <url>
-    <loc>https://www.burgertophat.com/promotion.html</loc>
+    <loc>https://ipanbintang.github.io/Project_MegaHolder/promotion.html</loc>
     <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -35,7 +35,7 @@
   
   <!-- About BTH -->
   <url>
-    <loc>https://www.burgertophat.com/about.html</loc>
+    <loc>https://ipanbintang.github.io/Project_MegaHolder/about.html</loc>
     <lastmod>2024-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
@@ -43,7 +43,7 @@
   
   <!-- Feedback / Reviews Page -->
   <url>
-    <loc>https://www.burgertophat.com/feedback.html</loc>
+    <loc>https://ipanbintang.github.io/Project_MegaHolder/feedback.html</loc>
     <lastmod>2024-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.75</priority>
@@ -51,7 +51,7 @@
   
   <!-- Privacy Policy -->
   <url>
-    <loc>https://www.burgertophat.com/privacy.html</loc>
+    <loc>https://ipanbintang.github.io/Project_MegaHolder/privacy.html</loc>
     <lastmod>2024-12-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
