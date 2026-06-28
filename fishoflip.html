@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Fish O' Flip | BURGER TopHat®</title>
+     <link rel="stylesheet" type="text/css" href="css/index.css" />
+     <link rel="stylesheet" type="text/css" href="css/fishoflip.css" />
+
+</head>
+
+<body>
+
+    <!-- ========== MOBILE NAVIGATION ========== -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="overlay"></div>
+        <div class="mobile-nav-content" id="mobileNavContent">
+            <div class="mobile-logo">
+                <img src="images/Santuy.png" alt="Burger TopHat Logo" class="mobile-logo-img" />
+            </div>
+            <span class="divider"></span>
+            <ul>
+                <li><a href="index.html#menu">Menu <span class="spacer"></span> ›</a></li>
+                <li><a href="index.html#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
+                <li><a href="index.html#offers">Offers <span class="spacer"></span> ›</a></li>
+                <li><a href="index.html#offers">Coupons <span class="spacer"></span> ›</a></li>
+                <li><a href="#">BK Delivery <span class="spacer"></span> ›</a></li>
+                <li class="has-menu">
+                    <a href="#" id="MobileMore">More <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileSubMenu">
+                        <ul>
+                            <li><a href="about.html">About BTH</a></li>
+                            <li><a href="index.html#news">Burger TopHat News</a></li>
+                            <li><a href="index.html#careers">Careers</a></li>
+                            <li><a href="index.html#contact">Contact Us</a></li>
+                            <li><a href="index.html#privacy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+ <!-- ========== DESKTOP HEADER / NAVIGATION ========== -->
+    <header id="desktopHeader" class="desktop-header">
+        <nav class="nav-container" aria-label="Primary Navigation">
+
+            <!-- LEFT: Logo -->
+            <div class="nav-center-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
+                </a>
+            </div>
+
+            <!-- MIDDLE: Main nav links -->
+            <div class="nav-left" id="navLeft">
+
+                <!-- EAT dropdown -->
+                <div class="mega-wrapper" id="eatWrapper">
+                    <button class="nav-btn mega-trigger" id="eatBtn" aria-expanded="false" data-target="eatMega">
+                        Eat <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="eatMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Our Menu</h4>
+                                <ul>
+                                    <li><a href="fishoflip.html">Fish O' Flip</a></li>
+                                    <li><a href="tophatdeluxe.html">TopHat Deluxe</a></li>
+                                    <li><a href="classicdeluxe.html">Classic Deluxe</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Sides &amp; Sweets</h4>
+                                <ul>
+                                    <li><a href="dessert.html">Dessert</a></li>
+                                    <li><a href="drink.html">Drinks</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEARN dropdown -->
+                <div class="mega-wrapper" id="learnWrapper">
+                    <button class="nav-btn mega-trigger" id="learnBtn" aria-expanded="false" data-target="learnMega">
+                        Learn <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="learnMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">About</h4>
+                                <ul>
+                                    <li><a href="about.html">About BTH</a></li>
+                                    <li><a href="news.html">News</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Policies</h4>
+                                <ul>
+                                    <li><a href="privacy.html">Privacy</a></li>
+                                    <li><a href="promotion.html">Promotion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOVE dropdown -->
+                <div class="mega-wrapper" id="loveWrapper">
+                    <button class="nav-btn mega-trigger" id="loveBtn" aria-expanded="false" data-target="loveMega">
+                        Love <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="loveMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Community</h4>
+                                <ul>
+                                    <li><a href="collab.html">Collab</a></li>
+                                    <li><a href="feedback.html">Feedback</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: Social + Locate + Order -->
+            <div class="nav-right">
+                <!-- Social icons -->
+                <a href="#" class="nav-social-icon" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="#" class="nav-social-icon" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <!-- Locate Us pill -->
+                <a href="#restaurants" class="nav-locate-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Locate Us
+                </a>
+                <!-- Order Now -->
+                <a href="menu.html" class="bk-btn bk-btn-red nav-order-btn">Order Now</a>
+                <!-- Mobile hamburger -->
+                <div class="mobile-header" id="mobileHeader">
+                    <button id="mobileMenuBtn" aria-label="Open navigation menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+        <!-- Mega menu backdrop -->
+        <div class="mega-backdrop" id="megaBackdrop"></div>
+    </header>
+
+    <!-- ========== MENU HERO ========== -->
+    <section class="category-hero">
+        <div class="category-hero-inner">
+            <span class="category-label">Our Signature</span>
+            <h1 class="category-title">Fish O' Flip®</h1>
+            <p class="category-tagline">Crispy, flame-grilled perfection with fresh toppings</p>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCT GRID ========== -->
+    <section class="product-grid-section">
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-card-image">🐟</div>
+                <h3 class="product-name">Classic Fish O' Flip</h3>
+                <p class="product-price">$8.99</p>
+                <button class="add-to-cart">Add to Order</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">🐟</div>
+                <h3 class="product-name">Double Fish O' Flip</h3>
+                <p class="product-price">$11.99</p>
+                <button class="add-to-cart">Add to Order</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">🐟</div>
+                <h3 class="product-name">Fish O' Flip Meal</h3>
+                <p class="product-price">$12.49</p>
+                <button class="add-to-cart">Add to Order</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">🐟</div>
+                <h3 class="product-name">Crispy Fish Combo</h3>
+                <p class="product-price">$13.99</p>
+                <button class="add-to-cart">Add to Order</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-bg">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>BTH Info</h4>
+                    <ul>
+                        <li><a href="about.html">About BTH®</a></li>
+                        <li><a href="index.html#story">Fresh Taste</a></li>
+                        <li><a href="menu.html">Made to Order</a></li>
+                        <li><a href="index.html#news">News &amp; Press</a></li>
+                        <li><a href="index.html#legal">Legal</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>My BTH</h4>
+                    <ul>
+                        <li><a href="index.html#restaurants">Your BTH® Locator</a></li>
+                        <li><a href="#">Join the BTH® Fan Kingdom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="index.html#careers">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>BTH Cares</h4>
+                    <ul>
+                        <li><a href="index.html#privacy">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">BURGER TopHat®</div>
+                    <p class="footer-copy">TM &amp; Copyright 2024 Burger TopHat Corporation. All rights reserved.</p>
+                    <p class="footer-location">Nearest Location: UiTM Kedah, Malaysia</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="Email">@</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>

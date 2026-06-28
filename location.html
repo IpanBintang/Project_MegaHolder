@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <title>Find a BTH® | Burger TopHat® Locations</title>
+    <meta name="description" content="Find your nearest Burger TopHat® location across Malaysia. Fresh flame-grilled burgers in Kedah, Perak, Selangor, Kuala Lumpur and Johor.">
+
+    <link rel="icon" type="image/png" href="images/Santuy.png">
+    <link rel="apple-touch-icon" href="images/Santuy.png">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/location.css" />
+</head>
+
+<body>
+
+    <!-- ========== MOBILE NAVIGATION ========== -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="overlay"></div>
+        <div class="mobile-nav-content" id="mobileNavContent">
+            <div class="mobile-logo">
+                <img src="images/Santuy.png" alt="Burger TopHat Logo" class="mobile-logo-img" />
+            </div>
+            <span class="divider"></span>
+            <ul>
+                <li class="has-menu">
+                    <a href="#" id="mobileEatToggle">Eat <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileEatMenu">
+                        <ul>
+                            <li><a href="fishoflip.html">Fish O' Flip</a></li>
+                            <li><a href="tophatdeluxe.html">TopHat Deluxe</a></li>
+                            <li><a href="classicdeluxe.html">Classic Deluxe</a></li>
+                            <li><a href="dessert.html">Dessert</a></li>
+                            <li><a href="drink.html">Drinks</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-menu">
+                    <a href="#" id="mobileLearnToggle">Learn <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileLearnMenu">
+                        <ul>
+                            <li><a href="about.html">About BTH</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="privacy.html">Privacy</a></li>
+                            <li><a href="promotion.html">Promotion</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-menu">
+                    <a href="#" id="mobileLoveToggle">Love <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileLoveMenu">
+                        <ul>
+                            <li><a href="collab.html">Collab</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="location.html" style="color:#D62300;">Locate Us <span class="spacer"></span> ›</a></li>
+                <li><a href="collab.html" style="color:#c0392b;font-weight:900;">✕ Dark Collab <span class="spacer"></span> ›</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== DESKTOP HEADER ========== -->
+    <header id="desktopHeader" class="desktop-header">
+        <nav class="nav-container" aria-label="Primary Navigation">
+
+            <div class="nav-center-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
+                </a>
+            </div>
+
+            <div class="nav-left" id="navLeft">
+
+                <!-- EAT -->
+                <div class="mega-wrapper" id="eatWrapper">
+                    <button class="nav-btn mega-trigger" id="eatBtn" aria-expanded="false" data-target="eatMega">
+                        Eat <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="eatMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Our Menu</h4>
+                                <ul>
+                                    <li><a href="fishoflip.html">Fish O' Flip</a></li>
+                                    <li><a href="tophatdeluxe.html">TopHat Deluxe</a></li>
+                                    <li><a href="classicdeluxe.html">Classic Deluxe</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Sides &amp; Sweets</h4>
+                                <ul>
+                                    <li><a href="dessert.html">Dessert</a></li>
+                                    <li><a href="drink.html">Drinks</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEARN -->
+                <div class="mega-wrapper" id="learnWrapper">
+                    <button class="nav-btn mega-trigger" id="learnBtn" aria-expanded="false" data-target="learnMega">
+                        Learn <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="learnMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Who We Are</h4>
+                                <ul>
+                                    <li><a href="about.html">About BTH®</a></li>
+                                    <li><a href="news.html">News</a></li>
+                                    <li><a href="promotion.html">Promotion</a></li>
+                                    <li><a href="privacy.html">Privacy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOVE -->
+                <div class="mega-wrapper" id="loveWrapper">
+                    <button class="nav-btn mega-trigger" id="loveBtn" aria-expanded="false" data-target="loveMega">
+                        Love <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="loveMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Fan Kingdom</h4>
+                                <ul>
+                                    <li><a href="collab.html">Collab</a></li>
+                                    <li><a href="feedback.html">Feedback</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="nav-right">
+                <a href="location.html" class="nav-btn nav-locate-btn" style="color:var(--bk-red);border-bottom-color:var(--bk-red);">
+                    Locate Us
+                </a>
+                <button class="mobile-header" id="mobileMenuBtn" aria-label="Open mobile menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </nav>
+        <div class="mega-backdrop" id="megaBackdrop"></div>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="loc-hero">
+        <div class="loc-hero-inner">
+            <p class="loc-hero-eyebrow">BURGER TOPHAT®</p>
+            <h1 class="loc-hero-title">Find a BTH Near You</h1>
+            <p class="loc-hero-sub">5 locations across Malaysia — flame-grilled &amp; ready.</p>
+        </div>
+    </section>
+
+    <!-- ========== STORE COUNT STRIP ========== -->
+    <div class="loc-count-strip">
+        <div class="loc-count-inner">
+            <span class="loc-count-num">5</span>
+            <span class="loc-count-label">BTH® Locations Across Malaysia</span>
+        </div>
+    </div>
+
+    <!-- ========== MAIN LOCATOR SECTION ========== -->
+    <section class="loc-section" id="locator">
+        <div class="loc-wrapper">
+
+            <!-- LEFT: Interactive SVG Map -->
+            <div class="loc-map-col">
+                <div class="loc-map-container">
+
+                    <!-- State filter pills (mobile) -->
+                    <div class="state-pills" id="statePills">
+                        <button class="state-pill active" data-state="all">All</button>
+                        <button class="state-pill" data-state="kedah">Kedah</button>
+                        <button class="state-pill" data-state="perak">Perak</button>
+                        <button class="state-pill" data-state="selangor">Selangor</button>
+                        <button class="state-pill" data-state="kl">KL</button>
+                        <button class="state-pill" data-state="johor">Johor</button>
+                    </div>
+
+                    <!-- SVG Malaysia Map -->
+                    <svg
+                        id="malaysiaSVG"
+                        viewBox="0 0 900 520"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Interactive map of Malaysia showing BTH locations"
+                        role="img"
+                    >
+                        <!-- ===== PENINSULAR MALAYSIA ===== -->
+
+                        <!-- Perlis -->
+                        <g class="state-group state-inactive" data-state="perlis" id="svg-perlis">
+                            <path class="state-path" d="M118,55 L130,48 L142,52 L148,62 L140,70 L126,68 L116,62 Z"/>
+                            <text class="state-label" x="132" y="63" font-size="7">PERLIS</text>
+                        </g>
+
+                        <!-- Kedah — BTH LOCATION -->
+                        <g class="state-group state-bth" data-state="kedah" id="svg-kedah" tabindex="0" role="button" aria-label="Kedah - BTH location">
+                            <path class="state-path" d="M100,70 L118,55 L148,62 L160,75 L170,90 L168,108 L155,118 L140,122 L120,115 L104,100 L96,85 Z"/>
+                            <text class="state-label" x="132" y="92" font-size="8">KEDAH</text>
+                            <!-- Pin -->
+                            <g class="map-pin" transform="translate(128,75)">
+                                <circle cx="0" cy="0" r="9" class="pin-ring"/>
+                                <path d="M0,-14 C-6,-14 -10,-8 -10,-3 C-10,4 0,16 0,16 C0,16 10,4 10,-3 C10,-8 6,-14 0,-14 Z" class="pin-body"/>
+                                <circle cx="0" cy="-3" r="4" class="pin-dot"/>
+            </g>
+                        </g>
+
+                        <!-- Penang -->
+                        <g class="state-group state-inactive" data-state="penang" id="svg-penang">
+                            <path class="state-path" d="M96,85 L104,100 L98,112 L86,108 L82,96 L90,88 Z"/>
+                            <text class="state-label" x="88" y="100" font-size="7">PENANG</text>
+                        </g>
+
+                        <!-- Perak — BTH LOCATION -->
+                        <g class="state-group state-bth" data-state="perak" id="svg-perak" tabindex="0" role="button" aria-label="Perak - BTH location">
+                            <path class="state-path" d="M104,100 L120,115 L140,122 L155,118 L168,108 L175,130 L178,158 L170,178 L155,190 L138,195 L118,188 L105,172 L98,150 L100,128 L98,112 Z"/>
+                            <text class="state-label" x="136" y="155" font-size="8">PERAK</text>
+                            <!-- Pin -->
+                            <g class="map-pin" transform="translate(138,138)">
+                                <circle cx="0" cy="0" r="9" class="pin-ring"/>
+                                <path d="M0,-14 C-6,-14 -10,-8 -10,-3 C-10,4 0,16 0,16 C0,16 10,4 10,-3 C10,-8 6,-14 0,-14 Z" class="pin-body"/>
+                                <circle cx="0" cy="-3" r="4" class="pin-dot"/>
+                            </g>
+                        </g>
+
+                        <!-- Kelantan -->
+                        <g class="state-group state-inactive" data-state="kelantan" id="svg-kelantan">
+                            <path class="state-path" d="M200,55 L240,48 L270,58 L280,80 L270,105 L250,115 L225,112 L205,98 L195,78 Z"/>
+                            <text class="state-label" x="232" y="85" font-size="8">KELANTAN</text>
+                        </g>
+
+                        <!-- Terengganu -->
+                        <g class="state-group state-inactive" data-state="terengganu" id="svg-terengganu">
+                            <path class="state-path" d="M270,58 L300,62 L318,80 L315,110 L300,128 L278,130 L260,118 L250,115 L270,105 L280,80 Z"/>
+                            <text class="state-label" x="282" y="95" font-size="8">TERENGGANU</text>
+                        </g>
+
+                        <!-- Pahang -->
+                        <g class="state-group state-inactive" data-state="pahang" id="svg-pahang">
+                            <path class="state-path" d="M175,130 L178,158 L170,178 L175,200 L192,218 L215,225 L245,222 L268,210 L285,195 L295,170 L300,148 L300,128 L278,130 L260,118 L250,115 L225,112 L205,98 Z"/>
+                            <text class="state-label" x="235" y="175" font-size="8">PAHANG</text>
+                        </g>
+
+                        <!-- Selangor — BTH LOCATION -->
+                        <g class="state-group state-bth" data-state="selangor" id="svg-selangor" tabindex="0" role="button" aria-label="Selangor - BTH location">
+                            <path class="state-path" d="M138,195 L155,190 L170,178 L175,200 L172,218 L160,228 L148,232 L135,228 L125,215 L122,202 Z"/>
+                            <text class="state-label" x="147" y="210" font-size="7">SELANGOR</text>
+                            <!-- Pin -->
+                            <g class="map-pin" transform="translate(150,196)">
+                                <circle cx="0" cy="0" r="9" class="pin-ring"/>
+                                <path d="M0,-14 C-6,-14 -10,-8 -10,-3 C-10,4 0,16 0,16 C0,16 10,4 10,-3 C10,-8 6,-14 0,-14 Z" class="pin-body"/>
+                                <circle cx="0" cy="-3" r="4" class="pin-dot"/>
+                            </g>
+                        </g>
+
+                        <!-- KL — BTH LOCATION -->
+                        <g class="state-group state-bth" data-state="kl" id="svg-kl" tabindex="0" role="button" aria-label="Kuala Lumpur - BTH location">
+                            <path class="state-path" d="M160,210 L172,205 L178,215 L172,226 L160,228 L155,220 Z"/>
+                            <text class="state-label" x="163" y="218" font-size="6">KL</text>
+                            <!-- Pin -->
+                            <g class="map-pin" transform="translate(167,206)">
+                                <circle cx="0" cy="0" r="9" class="pin-ring"/>
+                                <path d="M0,-14 C-6,-14 -10,-8 -10,-3 C-10,4 0,16 0,16 C0,16 10,4 10,-3 C10,-8 6,-14 0,-14 Z" class="pin-body"/>
+                                <circle cx="0" cy="-3" r="4" class="pin-dot"/>
+                            </g>
+                        </g>
+
+                        <!-- Negeri Sembilan -->
+                        <g class="state-group state-inactive" data-state="negeri" id="svg-negeri">
+                            <path class="state-path" d="M148,232 L160,228 L172,226 L178,240 L175,258 L160,268 L144,262 L136,248 L135,235 Z"/>
+                            <text class="state-label" x="153" y="250" font-size="6">N.SEMBILAN</text>
+                        </g>
+
+                        <!-- Melaka -->
+                        <g class="state-group state-inactive" data-state="melaka" id="svg-melaka">
+                            <path class="state-path" d="M144,262 L160,268 L165,280 L155,290 L140,285 L136,272 Z"/>
+                            <text class="state-label" x="146" y="278" font-size="7">MELAKA</text>
+                        </g>
+
+                        <!-- Johor — BTH LOCATION -->
+                        <g class="state-group state-bth" data-state="johor" id="svg-johor" tabindex="0" role="button" aria-label="Johor - BTH location">
+                            <path class="state-path" d="M136,248 L144,262 L140,285 L155,290 L170,305 L192,318 L218,322 L245,318 L265,305 L278,285 L280,265 L268,248 L250,238 L230,232 L210,235 L192,240 L175,258 L178,240 Z"/>
+                            <text class="state-label" x="210" y="278" font-size="8">JOHOR</text>
+                            <!-- Pin -->
+                            <g class="map-pin" transform="translate(215,258)">
+                                <circle cx="0" cy="0" r="9" class="pin-ring"/>
+                                <path d="M0,-14 C-6,-14 -10,-8 -10,-3 C-10,4 0,16 0,16 C0,16 10,4 10,-3 C10,-8 6,-14 0,-14 Z" class="pin-body"/>
+                                <circle cx="0" cy="-3" r="4" class="pin-dot"/>
+                            </g>
+                        </g>
+
+                        <!-- ===== EAST MALAYSIA ===== -->
+
+                        <!-- Sarawak -->
+                        <g class="state-group state-inactive" data-state="sarawak" id="svg-sarawak">
+                            <path class="state-path" d="M500,200 L560,180 L630,170 L700,175 L750,190 L780,215 L790,248 L780,275 L755,295 L720,310 L680,318 L635,320 L590,312 L550,295 L520,272 L505,248 L498,222 Z"/>
+                            <text class="state-label" x="640" y="255" font-size="10">SARAWAK</text>
+                        </g>
+
+                        <!-- Sabah -->
+                        <g class="state-group state-inactive" data-state="sabah" id="svg-sabah">
+                            <path class="state-path" d="M750,100 L810,85 L860,90 L885,115 L888,148 L872,175 L845,188 L808,190 L775,182 L752,162 L742,138 L742,115 Z"/>
+                            <text class="state-label" x="812" y="142" font-size="10">SABAH</text>
+                        </g>
+
+                        <!-- Labuan (small island, just a dot) -->
+                        <circle cx="718" cy="118" r="8" class="state-path state-inactive-direct" data-state="labuan"/>
+                        <text class="state-label" x="710" y="136" font-size="6">LABUAN</text>
+
+                        <!-- South China Sea label -->
+                        <text x="380" y="240" font-size="9" fill="#a8c4d8" font-style="italic" text-anchor="middle">SOUTH CHINA SEA</text>
+
+                    </svg>
+
+                    <!-- Map legend -->
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot legend-bth"></span>
+                            <span>BTH® Location</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot legend-none"></span>
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Store Cards -->
+            <div class="loc-cards-col" id="storeCards">
+
+                <div class="cards-header">
+                    <h2 class="cards-title">Our Locations</h2>
+                    <span class="cards-count" id="cardsCount">5 stores</span>
+                </div>
+
+                <!-- KEDAH -->
+                <div class="store-card" data-state="kedah" id="card-kedah">
+                    <div class="store-card-inner">
+                        <div class="store-card-header">
+                            <div class="store-badge">BTH®</div>
+                            <span class="store-state-tag">Kedah</span>
+                        </div>
+                        <h3 class="store-name">BTH® UiTM Kedah</h3>
+                        <div class="store-info">
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Address placeholder — UiTM Kedah</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>Hours placeholder</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <span>Phone placeholder</span>
+                            </div>
+                        </div>
+                        <a href="#" class="store-direction-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PERAK -->
+                <div class="store-card" data-state="perak" id="card-perak">
+                    <div class="store-card-inner">
+                        <div class="store-card-header">
+                            <div class="store-badge">BTH®</div>
+                            <span class="store-state-tag">Perak</span>
+                        </div>
+                        <h3 class="store-name">BTH® Gerik, Perak</h3>
+                        <div class="store-info">
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Address placeholder — Gerik, Perak</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>Hours placeholder</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <span>Phone placeholder</span>
+                            </div>
+                        </div>
+                        <a href="#" class="store-direction-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SELANGOR -->
+                <div class="store-card" data-state="selangor" id="card-selangor">
+                    <div class="store-card-inner">
+                        <div class="store-card-header">
+                            <div class="store-badge">BTH®</div>
+                            <span class="store-state-tag">Selangor</span>
+                        </div>
+                        <h3 class="store-name">BTH® Puncak Alam, Selangor</h3>
+                        <div class="store-info">
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Address placeholder — Puncak Alam, Selangor</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>Hours placeholder</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <span>Phone placeholder</span>
+                            </div>
+                        </div>
+                        <a href="#" class="store-direction-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KL -->
+                <div class="store-card" data-state="kl" id="card-kl">
+                    <div class="store-card-inner">
+                        <div class="store-card-header">
+                            <div class="store-badge">BTH®</div>
+                            <span class="store-state-tag">Kuala Lumpur</span>
+                        </div>
+                        <h3 class="store-name">BTH® Gombak, Kuala Lumpur</h3>
+                        <div class="store-info">
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Address placeholder — Gombak, KL</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>Hours placeholder</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <span>Phone placeholder</span>
+                            </div>
+                        </div>
+                        <a href="#" class="store-direction-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- JOHOR -->
+                <div class="store-card" data-state="johor" id="card-johor">
+                    <div class="store-card-inner">
+                        <div class="store-card-header">
+                            <div class="store-badge">BTH®</div>
+                            <span class="store-state-tag">Johor</span>
+                        </div>
+                        <h3 class="store-name">BTH® Pasir Gudang, Johor</h3>
+                        <div class="store-info">
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Address placeholder — Pasir Gudang, Johor</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>Hours placeholder</span>
+                            </div>
+                            <div class="store-info-row">
+                                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <span>Phone placeholder</span>
+                            </div>
+                        </div>
+                        <a href="#" class="store-direction-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- /loc-cards-col -->
+        </div><!-- /loc-wrapper -->
+    </section>
+
+    <!-- ========== BOTTOM CTA ========== -->
+    <section class="loc-cta">
+        <div class="loc-cta-inner">
+            <h2 class="loc-cta-title">Can't find us near you yet?</h2>
+            <p class="loc-cta-sub">We're growing. Follow us to know when BTH® lands in your city.</p>
+            <div class="loc-cta-btns">
+                <a href="#" class="bk-btn bk-btn-orange">Follow BTH® on Instagram</a>
+                <a href="feedback.html" class="bk-btn bk-btn-outline">Suggest a Location</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-bg">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Eat</h4>
+                    <ul>
+                        <li><a href="fishoflip.html">Fish O' Flip</a></li>
+                        <li><a href="tophatdeluxe.html">TopHat Deluxe</a></li>
+                        <li><a href="classicdeluxe.html">Classic Deluxe</a></li>
+                        <li><a href="dessert.html">Dessert</a></li>
+                        <li><a href="drink.html">Drinks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Learn</h4>
+                    <ul>
+                        <li><a href="about.html">About BTH®</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="promotion.html">Promotion</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Love</h4>
+                    <ul>
+                        <li><a href="collab.html">Collab</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Find Us</h4>
+                    <ul>
+                        <li><a href="location.html">BTH® Locator</a></li>
+                        <li><a href="#">Join the Fan Kingdom</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">BURGER TopHat®</div>
+                    <p class="footer-copy">TM &amp; Copyright 2024 Burger TopHat Corporation. All rights reserved.</p>
+                    <p class="footer-location">5 Locations Across Malaysia</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="Email">@</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/location.js"></script>
+
+</body>
+</html>

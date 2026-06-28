@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>About BTH® | BURGER TopHat®</title>
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+
+    <!-- ========== MOBILE NAVIGATION ========== -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="overlay"></div>
+        <div class="mobile-nav-content" id="mobileNavContent">
+            <div class="mobile-logo">
+                <img src="images/Santuy.png" alt="Burger TopHat Logo" class="mobile-logo-img" />
+            </div>
+            <span class="divider"></span>
+            <ul>
+                <li><a href="index.html#menu">Menu <span class="spacer"></span> ›</a></li>
+                <li><a href="index.html#restaurants">Restaurants <span class="spacer"></span> ›</a></li>
+                <li><a href="index.html#offers">Offers <span class="spacer"></span> ›</a></li>
+                <li><a href="index.html#offers">Coupons <span class="spacer"></span> ›</a></li>
+                <li><a href="#">BK Delivery <span class="spacer"></span> ›</a></li>
+                <li class="has-menu">
+                    <a href="#" id="MobileMore">More <span class="spacer"></span> ▾</a>
+                    <div class="sub-menu" id="mobileSubMenu">
+                        <ul>
+                            <li><a href="about.html">About BTH</a></li>
+                            <li><a href="index.html#news">Burger TopHat News</a></li>
+                            <li><a href="index.html#careers">Careers</a></li>
+                            <li><a href="index.html#contact">Contact Us</a></li>
+                            <li><a href="index.html#privacy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== DESKTOP HEADER / NAVIGATION ========== -->
+    <header id="desktopHeader" class="desktop-header">
+        <nav class="nav-container" aria-label="Primary Navigation">
+
+            <!-- LEFT: Logo -->
+            <div class="nav-center-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Santuy.png" alt="Burger TopHat Logo" class="desktop-logo-img" />
+                </a>
+            </div>
+
+            <!-- MIDDLE: Main nav links -->
+            <div class="nav-left" id="navLeft">
+
+                <!-- EAT dropdown -->
+                <div class="mega-wrapper" id="eatWrapper">
+                    <button class="nav-btn mega-trigger" id="eatBtn" aria-expanded="false" data-target="eatMega">
+                        Eat <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="eatMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Our Menu</h4>
+                                <ul>
+                                    <li><a href="fishoflip.html">Fish O' Flip</a></li>
+                                    <li><a href="tophatdeluxe.html">TopHat Deluxe</a></li>
+                                    <li><a href="classicdeluxe.html">Classic Deluxe</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Sides &amp; Sweets</h4>
+                                <ul>
+                                    <li><a href="dessert.html">Dessert</a></li>
+                                    <li><a href="drink.html">Drinks</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEARN dropdown -->
+                <div class="mega-wrapper" id="learnWrapper">
+                    <button class="nav-btn mega-trigger" id="learnBtn" aria-expanded="false" data-target="learnMega">
+                        Learn <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="learnMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">About</h4>
+                                <ul>
+                                    <li><a href="about.html">About BTH</a></li>
+                                    <li><a href="news.html">News</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Policies</h4>
+                                <ul>
+                                    <li><a href="privacy.html">Privacy</a></li>
+                                    <li><a href="promotion.html">Promotion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOVE dropdown -->
+                <div class="mega-wrapper" id="loveWrapper">
+                    <button class="nav-btn mega-trigger" id="loveBtn" aria-expanded="false" data-target="loveMega">
+                        Love <span class="nav-chevron">&#8964;</span>
+                    </button>
+                    <div class="mega-menu" id="loveMega" aria-hidden="true">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4 class="mega-heading">Community</h4>
+                                <ul>
+                                    <li><a href="collab.html">Collab</a></li>
+                                    <li><a href="feedback.html">Feedback</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: Social + Locate + Order -->
+            <div class="nav-right">
+                <!-- Social icons -->
+                <a href="#" class="nav-social-icon" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="#" class="nav-social-icon" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <!-- Locate Us pill -->
+                <a href="#restaurants" class="nav-locate-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Locate Us
+                </a>
+                <!-- Order Now -->
+                <a href="menu.html" class="bk-btn bk-btn-red nav-order-btn">Order Now</a>
+                <!-- Mobile hamburger -->
+                <div class="mobile-header" id="mobileHeader">
+                    <button id="mobileMenuBtn" aria-label="Open navigation menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+        <!-- Mega menu backdrop -->
+        <div class="mega-backdrop" id="megaBackdrop"></div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main-content">
+
+        <!-- ========== HERO SECTION ========== -->
+        <section class="coming-soon-section">
+            <div class="coming-soon-inner">
+                <span class="coming-soon-label">Our Story</span>
+                <h1 class="coming-soon-title">About<br>Burger TopHat®</h1>
+                <div class="coming-soon-divider"></div>
+                <p class="coming-soon-subtitle">
+                    We're putting the finishing touches on our story.<br>
+                    Come back soon to learn about our flame-grilled heritage,
+                    our people, and what makes every bite worth it.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== OUR STORY SECTION ========== -->
+        <section class="about-story-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2>Our Flame-Grilled Heritage</h2>
+                    <p>
+                        Burger TopHat® has been serving flame-grilled goodness since our inception. 
+                        Our commitment to quality, fresh ingredients, and exceptional service has made us 
+                        a beloved choice for burger lovers everywhere.
+                    </p>
+                    <p>
+                        Every burger is crafted with care, featuring premium beef grilled to perfection 
+                        on our signature flame grill. We believe that great burgers start with great ingredients 
+                        and an unwavering commitment to excellence.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== VIDEO SECTION ========== -->
+        <section class="about-video-section">
+            <div class="container">
+                <h2>Experience Burger TopHat®</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UsjsYMo3O1Q?si=Clo2O2HyxmiyX2ir" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== BURGER TOPHAT® TIMELINE ========== -->
+        <section class="about-timeline-section">
+            <div class="container">
+                <h2>Our Journey</h2>
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline Item 1999 - LEFT -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">1999</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🎩</div>
+                            <h3>The TopHat Legacy Begins</h3>
+                            <p>Burger TopHat® was born with a simple vision: to serve flame-grilled burgers that celebrate quality and taste. Our first restaurant opens its doors in Kedah, Malaysia.</p>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="images/tophat-1999.jpg" alt="TopHat founding 1999" />
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2006 - RIGHT -->
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2006</div>
+                        <div class="timeline-image">
+                            <img src="images/tophat-2006.jpg" alt="TopHat expansion 2006" />
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🍔</div>
+                            <h3>Expansion Across Malaysia</h3>
+                            <p>With our commitment to excellence, Burger TopHat® expands to multiple locations. We introduce our signature flame-grilled technique that becomes legendary among burger lovers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2018 - LEFT -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">⭐</div>
+                            <h3>Digital Revolution</h3>
+                            <p>Burger TopHat® launches its digital presence with online ordering and delivery services. We embrace innovation while maintaining our core commitment to quality.</p>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="images/tophat-2018.jpg" alt="Digital innovation 2018" />
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2020 - RIGHT -->
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-image">
+                            <img src="images/tophat-2020.jpg" alt="Community initiative 2020" />
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🤝</div>
+                            <h3>Community First Initiative</h3>
+                            <p>During challenging times, we stay committed to serving our communities. Burger TopHat® launches special programs to support local suppliers and our team members.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2026 - LEFT -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🚀</div>
+                            <h3>The Future is Now</h3>
+                            <p>Celebrating our heritage while innovating for tomorrow. Burger TopHat® continues to redefine the burger experience with sustainable practices and unforgettable moments.</p>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="images/tophat-2026.jpg" alt="Future of TopHat 2026" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CALL TO ACTION SECTION ========== -->
+        <section class="about-cta-section">
+            <div class="container">
+                <h2>Ready to Experience Burger TopHat®?</h2>
+                <div class="cta-buttons">
+                    <a href="menu.html" class="bk-btn bk-btn-red">Order Now</a>
+                    <a href="index.html#restaurants" class="bk-btn bk-btn-orange">Find a Restaurant</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-bg">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>BTH Info</h4>
+                    <ul>
+                        <li><a href="about.html">About BTH®</a></li>
+                        <li><a href="index.html#story">Fresh Taste</a></li>
+                        <li><a href="menu.html">Made to Order</a></li>
+                        <li><a href="index.html#news">News &amp; Press</a></li>
+                        <li><a href="index.html#legal">Legal</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>My BTH</h4>
+                    <ul>
+                        <li><a href="index.html#restaurants">Your BTH® Locator</a></li>
+                        <li><a href="#">Join the BTH® Fan Kingdom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="index.html#careers">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>BTH Cares</h4>
+                    <ul>
+                        <li><a href="index.html#privacy">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">BURGER TopHat®</div>
+                    <p class="footer-copy">TM &amp; Copyright 2024 Burger TopHat Corporation. All rights reserved.</p>
+                    <p class="footer-location">Nearest Location: UiTM Kedah, Malaysia</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="Email">@</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
