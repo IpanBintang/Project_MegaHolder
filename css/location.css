@@ -1,0 +1,668 @@
+/* =========================================
+   LOCATIONS PAGE STYLING
+   ========================================= */
+
+/* ========== HERO SECTION ========== */
+.locations-hero {
+  background: linear-gradient(135deg, #D62300 0%, #a81a00 100%);
+  padding: 80px 24px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.locations-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.locations-subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* ========== MAP CONTAINER ========== */
+.locations-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  padding: 0 24px 60px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.map-wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  background-color: #f5f5f5;
+}
+
+.leaflet-control-container .leaflet-top,
+.leaflet-control-container .leaflet-bottom {
+  z-index: 999;
+}
+
+/* ========== ZOOM BUTTONS ========== */
+.stat-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 400;
+  display: flex;
+  gap: 8px;
+}
+
+.zoom-button {
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid #D62300;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-button:hover {
+  background-color: #D62300;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ========== DETAILS SECTION ========== */
+.details-wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+#state-detail {
+  width: 100%;
+}
+
+/* ========== STATE SELECTOR ========== */
+.state-selector-wrapper {
+  margin-bottom: 24px;
+}
+
+#state-selector {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+#state-selector:hover,
+#state-selector:focus {
+  border-color: #D62300;
+  outline: none;
+}
+
+#state-selector:focus {
+  box-shadow: 0 0 0 3px rgba(214, 35, 0, 0.1);
+}
+
+/* ========== STATE INFO ========== */
+#state-info {
+  margin-bottom: 24px;
+}
+
+.locations-summary {
+  background-color: #fff5f5;
+  padding: 16px;
+  border-left: 4px solid #D62300;
+  border-radius: 6px;
+}
+
+.locations-summary p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.locations-summary p:first-child {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #D62300;
+}
+
+/* ========== LOCATIONS LIST ========== */
+.locations-detail {
+  width: 100%;
+}
+
+.locations-detail h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #D62300;
+}
+
+.locations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.location-card {
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.location-card:hover {
+  border-color: #D62300;
+  box-shadow: 0 4px 12px rgba(214, 35, 0, 0.1);
+}
+
+.location-card h5 {
+  font-size: 1.1rem;
+  color: #D62300;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.location-card p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.location-card i {
+  width: 20px;
+  margin-right: 8px;
+  text-align: center;
+  font-style: normal;
+  color: #D62300;
+}
+
+.icon-location::before {
+  content: "📍";
+}
+
+.icon-phone::before {
+  content: "☎";
+}
+
+.icon-clock::before {
+  content: "🕐";
+}
+
+.location-card .btn-red {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #D62300;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.location-card .btn-red:hover {
+  background-color: #a81a00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(214, 35, 0, 0.2);
+}
+
+/* ========== LOCATION DETAIL VIEW ========== */
+.location-detail-view {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.location-detail-view h4 {
+  color: #D62300;
+  font-size: 1.3rem;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.location-detail-view p {
+  margin: 12px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.location-detail-view strong {
+  color: #333;
+}
+
+.location-detail-view a {
+  color: #D62300;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.location-detail-view a:hover {
+  text-decoration: underline;
+}
+
+/* ========== LOCATION POPUP ========== */
+.location-popup {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-width: 250px;
+}
+
+.location-popup h5 {
+  color: #D62300;
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.location-popup p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.location-popup strong {
+  color: #333;
+}
+
+.btn-get-directions {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: #D62300;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-get-directions:hover {
+  background-color: #a81a00;
+}
+
+/* ========== NO LOCATIONS ========== */
+.no-locations {
+  text-align: center;
+  padding: 24px;
+  color: #999;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 1024px) {
+  .locations-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px 40px 20px;
+  }
+
+  #map {
+    height: 500px;
+  }
+
+  .locations-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .locations-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px 40px 16px;
+  }
+
+  .locations-hero {
+    padding: 60px 16px;
+    margin-bottom: 20px;
+  }
+
+  .locations-title {
+    font-size: 2rem;
+  }
+
+  .locations-subtitle {
+    font-size: 1rem;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  .details-wrapper {
+    max-height: none;
+    order: -1;
+  }
+
+  .stat-buttons {
+    bottom: 10px;
+    left: 10px;
+    flex-wrap: wrap;
+  }
+
+  .zoom-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .locations-container {
+    padding: 0 12px 24px 12px;
+  }
+
+  .locations-hero {
+    padding: 50px 12px;
+    margin-bottom: 20px;
+  }
+
+  .locations-title {
+    font-size: 1.6rem;
+  }
+
+  .locations-subtitle {
+    font-size: 0.9rem;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  .details-wrapper {
+    padding: 16px;
+  }
+
+  .locations-detail h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .location-card {
+    padding: 12px;
+  }
+
+  .location-card h5 {
+    font-size: 1rem;
+  }
+
+  .location-card p {
+    font-size: 0.85rem;
+  }
+
+  .stat-buttons {
+    gap: 6px;
+  }
+
+  .zoom-button {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ========== SCROLLBAR STYLING ========== */
+.details-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.details-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.details-wrapper::-webkit-scrollbar-thumb {
+  background: #D62300;
+  border-radius: 10px;
+}
+
+.details-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a81a00;
+}
+
+  /* =========================================
+           LOCATIONS PAGE STYLING
+           ========================================= */
+.locations-hero {
+            background: linear-gradient(135deg, #D62300 0%, #a81a00 100%);
+            padding: 80px 24px;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .locations-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0 0 16px 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        .locations-subtitle {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        /* ========== LAYOUT ========== */
+        .locations-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            padding: 0 24px 60px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .map-wrapper {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .map-title {
+            font-size: 0.85rem;
+            color: #888;
+            margin: 0 0 12px 0;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* ========== SVG MAP ========== */
+        #malaysia-svg-map {
+            width: 100%;
+            max-width: 860px;
+            height: auto;
+            display: block;
+        }
+
+        /* Default state fill */
+        #malaysia-svg-map path,
+        #malaysia-svg-map polygon {
+            fill: #e8e8e8;
+            stroke: #ffffff;
+            stroke-width: 1.5;
+            cursor: default;
+            transition: fill 0.25s ease;
+        }
+
+        /* States with a BTH branch — clickable */
+        #malaysia-svg-map .bth-state {
+            fill: #f5c4bc;
+            stroke: #ffffff;
+            stroke-width: 1.5;
+            cursor: pointer;
+        }
+        #malaysia-svg-map .bth-state:hover,
+        #malaysia-svg-map .bth-state.active {
+            fill: #D62300;
+        }
+
+        /* ========== ZOOM BUTTONS ========== */
+        .map-zoom-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .zoom-button {
+            background-color: #ffffff;
+            color: #333;
+            border: 2px solid #D62300;
+            padding: 7px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .zoom-button:hover,
+        .zoom-button.active {
+            background-color: #D62300;
+            color: #ffffff;
+        }
+
+        /* ========== DETAILS PANEL ========== */
+        .details-wrapper {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            height: fit-content;
+            max-height: 640px;
+            overflow-y: auto;
+        }
+        .locations-summary {
+            background-color: #fff5f5;
+            padding: 16px;
+            border-left: 4px solid #D62300;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .locations-summary p {
+            margin: 6px 0;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        .locations-summary p strong {
+            color: #D62300;
+            font-size: 1.05rem;
+        }
+        .locations-prompt {
+            color: #999;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 32px 16px;
+            font-style: italic;
+        }
+        .locations-detail h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin: 0 0 16px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D62300;
+        }
+        .location-card {
+            background-color: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 14px;
+            transition: all 0.2s ease;
+        }
+        .location-card:hover {
+            border-color: #D62300;
+            box-shadow: 0 4px 12px rgba(214,35,0,0.1);
+        }
+        .location-card h5 {
+            font-size: 1.05rem;
+            color: #D62300;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .location-card p {
+            margin: 6px 0;
+            font-size: 0.88rem;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+        .location-card p .ic {
+            flex-shrink: 0;
+        }
+        .btn-directions {
+            display: block;
+            width: 100%;
+            margin-top: 12px;
+            padding: 9px;
+            background-color: #D62300;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            box-sizing: border-box;
+        }
+        .btn-directions:hover {
+            background-color: #a81a00;
+        }
+
+        /* ========== SCROLLBAR ========== */
+        .details-wrapper::-webkit-scrollbar { width: 6px; }
+        .details-wrapper::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .details-wrapper::-webkit-scrollbar-thumb { background: #D62300; border-radius: 10px; }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .locations-container {
+                grid-template-columns: 1fr;
+                padding: 0 16px 40px;
+            }
+            .details-wrapper { max-height: none; }
+            .locations-title { font-size: 2rem; }
+        }
+        @media (max-width: 480px) {
+            .locations-title { font-size: 1.6rem; }
+            .locations-hero { padding: 50px 12px; }
+        }

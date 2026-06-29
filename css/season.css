@@ -1,0 +1,418 @@
+/* =========================================
+   BURGER TOPHAT® — SEASON.CSS
+   Football / Season Calendar page styles
+   Green & Yellow theme
+   ========================================= */
+
+:root {
+    --s-green:       #2d7a1f;
+    --s-green-light: #3fa829;
+    --s-green-dark:  #1a4d10;
+    --s-yellow:      #f5c800;
+    --s-yellow-dark: #c9a100;
+    --s-cream:       #f7f9f3;
+    --s-white:       #ffffff;
+    --s-grey:        #5a5a5a;
+    --s-coming:      #888888;
+}
+
+/* ── Canvas for falling footballs ── */
+#footballCanvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* ── Hero Banner ── */
+.season-hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--s-green-dark) 0%, var(--s-green) 60%, var(--s-green-light) 100%);
+    padding: 90px 24px 80px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* pitch lines overlay */
+.season-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 60px,
+            rgba(255,255,255,0.04) 60px,
+            rgba(255,255,255,0.04) 61px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 60px,
+            rgba(255,255,255,0.04) 60px,
+            rgba(255,255,255,0.04) 61px
+        );
+    pointer-events: none;
+}
+
+.season-hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--s-yellow);
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.season-hero-title {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    position: relative;
+}
+
+.season-hero-title span {
+    color: var(--s-yellow);
+}
+
+.season-hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    max-width: 500px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+    position: relative;
+}
+
+/* ── Countdown ── */
+.countdown-wrap {
+    display: inline-flex;
+    gap: 16px;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(245,200,0,0.35);
+    border-radius: 16px;
+    padding: 20px 32px;
+    position: relative;
+}
+
+.countdown-label-top {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--s-yellow);
+    color: var(--s-green-dark);
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 3px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.cd-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 54px;
+}
+
+.cd-block .cd-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.cd-block .cd-unit {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--s-yellow);
+    margin-top: 4px;
+}
+
+.cd-sep {
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.4);
+    align-self: center;
+    margin-top: -6px;
+}
+
+/* ── Timeline Strip ── */
+.timeline-section {
+    position: relative;
+    background: var(--s-cream);
+    padding: 64px 24px 20px;
+    z-index: 1;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--s-green);
+    margin-bottom: 48px;
+}
+
+.timeline-track {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* horizontal line */
+.timeline-track::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--s-green) 0%, var(--s-yellow) 50%, #ccc 100%);
+    border-radius: 4px;
+    z-index: 0;
+}
+
+.tl-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.tl-dot {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    margin-bottom: 12px;
+    transition: transform 0.2s;
+}
+
+.tl-dot:hover { transform: scale(1.15); }
+
+.tl-item.active   .tl-dot { background: var(--s-green); }
+.tl-item.upcoming .tl-dot { background: var(--s-yellow); }
+.tl-item.soon     .tl-dot { background: #ccc; }
+
+.tl-month {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--s-green-dark);
+    margin-bottom: 4px;
+}
+
+.tl-item.soon .tl-month { color: var(--s-coming); }
+
+.tl-label {
+    font-size: 0.78rem;
+    color: var(--s-grey);
+    text-align: center;
+    max-width: 80px;
+    line-height: 1.4;
+}
+
+/* ── Month Banners ── */
+.banners-section {
+    position: relative;
+    background: var(--s-cream);
+    padding: 20px 24px 100px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ── Individual Banner ── */
+.season-banner {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.1);
+    display: flex;
+    min-height: 240px;
+    position: relative;
+}
+
+/* Active banner — green */
+.season-banner.active {
+    background: linear-gradient(120deg, var(--s-green-dark) 0%, var(--s-green) 100%);
+}
+
+/* Upcoming banner — yellow */
+.season-banner.upcoming {
+    background: linear-gradient(120deg, var(--s-yellow-dark) 0%, var(--s-yellow) 100%);
+}
+
+/* Coming soon — grey */
+.season-banner.soon {
+    background: linear-gradient(120deg, #555 0%, #888 100%);
+}
+
+.banner-accent {
+    width: 10px;
+    flex-shrink: 0;
+}
+
+.season-banner.active   .banner-accent { background: var(--s-yellow); }
+.season-banner.upcoming .banner-accent { background: var(--s-green); }
+.season-banner.soon     .banner-accent { background: #aaa; }
+
+.banner-body {
+    flex: 1;
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.banner-icon {
+    font-size: 5rem;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+
+.banner-text { flex: 1; }
+
+.banner-month-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+}
+
+.season-banner.active   .banner-month-tag { background: var(--s-yellow);     color: var(--s-green-dark); }
+.season-banner.upcoming .banner-month-tag { background: var(--s-green);       color: #fff; }
+.season-banner.soon     .banner-month-tag { background: rgba(255,255,255,0.15); color: #fff; }
+
+.banner-title {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.season-banner.active   .banner-title { color: #fff; }
+.season-banner.upcoming .banner-title { color: var(--s-green-dark); }
+.season-banner.soon     .banner-title { color: #fff; }
+
+.banner-desc {
+    font-size: 0.97rem;
+    line-height: 1.7;
+    max-width: 420px;
+}
+
+.season-banner.active   .banner-desc { color: rgba(255,255,255,0.82); }
+.season-banner.upcoming .banner-desc { color: rgba(30,60,10,0.8); }
+.season-banner.soon     .banner-desc { color: rgba(255,255,255,0.65); }
+
+.banner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 18px;
+    border-radius: 999px;
+}
+
+.season-banner.active   .banner-badge { background: var(--s-yellow); color: var(--s-green-dark); }
+.season-banner.upcoming .banner-badge { background: var(--s-green);   color: #fff; }
+.season-banner.soon     .banner-badge { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); }
+
+/* right decoration */
+.banner-deco {
+    font-size: 9rem;
+    opacity: 0.08;
+    position: absolute;
+    right: 32px;
+    bottom: -10px;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ── Countdown inside active banner ── */
+.banner-countdown {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.banner-countdown .cd-block .cd-num {
+    font-size: 1.6rem;
+    color: var(--s-yellow);
+}
+
+.banner-countdown .cd-block .cd-unit {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.58rem;
+}
+
+.banner-countdown .cd-sep {
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.3);
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 768px) {
+    .countdown-wrap { gap: 10px; padding: 16px 20px; }
+    .cd-block .cd-num { font-size: 1.6rem; }
+
+    .timeline-track { flex-wrap: wrap; gap: 24px; }
+    .timeline-track::before { display: none; }
+
+    .banner-body { flex-direction: column; gap: 20px; padding: 28px 24px; }
+    .banner-icon { font-size: 3.5rem; }
+    .banner-deco { font-size: 5rem; }
+
+    .banner-countdown { flex-wrap: wrap; }
+}
+
+@media screen and (max-width: 480px) {
+    .cd-block { min-width: 40px; }
+    .cd-block .cd-num { font-size: 1.3rem; }
+    .banner-title { font-size: 1.4rem; }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "BTH® Kedah",
+    "state": "Kedah",
+    "state_id": "05",
+    "lat": 6.1184,
+    "lng": 100.3688,
+    "address": "UiTM Kedah, 08400 Merbok, Kedah",
+    "phone": "+60-4-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 2,
+    "name": "BTH® Perak",
+    "state": "Perak",
+    "state_id": "11",
+    "lat": 3.8118,
+    "lng": 101.5440,
+    "address": "Ipoh, 30000 Perak",
+    "phone": "+60-5-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 3,
+    "name": "BTH® Selangor",
+    "state": "Selangor",
+    "state_id": "15",
+    "lat": 3.1380,
+    "lng": 101.6874,
+    "address": "Puncak Alam, 42300 Selangor",
+    "phone": "+60-3-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 4,
+    "name": "BTH® Kuala Lumpur",
+    "state": "Federal Territory of Kuala Lumpur",
+    "state_id": "01",
+    "lat": 3.1390,
+    "lng": 101.6869,
+    "address": "Gombak, 53100 Kuala Lumpur",
+    "phone": "+60-3-XXXX-XXXX",
+    "hours": "10:00 AM - 12:00 AM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 5,
+    "name": "BTH® Johor",
+    "state": "Johor",
+    "state_id": "04",
+    "lat": 1.4854,
+    "lng": 103.7618,
+    "address": "Johor Bahru, 80000 Johor",
+    "phone": "+60-7-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 6,
+    "name": "BTH® Penang",
+    "state": "Penang",
+    "state_id": "10",
+    "lat": 5.4164,
+    "lng": 100.3327,
+    "address": "Georgetown, 10200 Penang",
+    "phone": "+60-4-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 7,
+    "name": "BTH® Melaka",
+    "state": "Melaka",
+    "state_id": "07",
+    "lat": 2.1896,
+    "lng": 102.2501,
+    "address": "Melaka, 75000 Melaka",
+    "phone": "+60-6-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 8,
+    "name": "BTH® Sabah",
+    "state": "Sabah",
+    "state_id": "13",
+    "lat": 5.9788,
+    "lng": 118.0894,
+    "address": "Kota Kinabalu, 88000 Sabah",
+    "phone": "+60-88-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  },
+  {
+    "id": 9,
+    "name": "BTH® Sarawak",
+    "state": "Sarawak",
+    "state_id": "14",
+    "lat": 1.5533,
+    "lng": 110.3592,
+    "address": "Kuching, 93000 Sarawak",
+    "phone": "+60-82-XXXX-XXXX",
+    "hours": "10:00 AM - 11:00 PM",
+    "type": "Restaurant"
+  }
+]
