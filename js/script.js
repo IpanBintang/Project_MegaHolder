@@ -533,35 +533,6 @@ function initMenuDetailsModal() {
             ingredients: 'Natural mineral water',
             prepTime: '1 minute'
         }
-        // ── Dark Collab Menu ──
-        crimsonwhopper: {
-            title: 'The Crimson Whopper',
-            description: 'Our signature Whopper dressed in a blood-red charcoal bun, smoked ghost-pepper aioli, caramelised onions and double flame-grilled beef. The Vampire\'s feast.',
-            price: 'RM 18.90',
-            ingredients: 'Double beef patty, Charcoal-beetroot bun, Ghost-pepper aioli, Caramelised onions, Cheese, Lettuce',
-            prepTime: '6-8 minutes'
-        },
-        wraithchicken: {
-            title: 'Wraith Chicken',
-            description: 'Ash-dusted crispy chicken fillet, midnight-black sesame bun, pale garlic cream, pickled jalapeños and a smoked paprika crunch. Hauntingly good.',
-            price: 'RM 16.90',
-            ingredients: 'Crispy chicken fillet, Black sesame bun, Garlic cream, Pickled jalapeños, Smoked paprika crunch',
-            prepTime: '5-7 minutes'
-        },
-        obsidianfish: {
-            title: 'Obsidian Fish O\' Flip',
-            description: 'Charcoal-battered crispy fish fillet served with loaded fries and a dark spiced tartar sauce. A shadowy twist on our signature classic.',
-            price: 'RM 17.90',
-            ingredients: 'Charcoal-battered fish fillet, Loaded fries, Dark spiced tartar sauce, Fresh lettuce',
-            prepTime: '6-8 minutes'
-        },
-        midnightshake: {
-            title: 'Midnight Reaper Shake',
-            description: 'A rich, velvety chocolate shake crowned with a bat-wing wafer and a sugar skull. Sweet enough to raise the dead.',
-            price: 'RM 12.90',
-            ingredients: 'Chocolate shake, Whipped chocolate cream, Bat-wing wafer, Sugar skull topping',
-            prepTime: '3-4 minutes'
-        }
     };
 
     // Open modal function
@@ -591,11 +562,7 @@ function initMenuDetailsModal() {
             vanillasoftserve: 'images/vanilla.png',
             pepsi: 'images/pepsi.png',
             cola: 'images/cola.png',
-            evian: 'images/evian.png',
-            crimsonwhopper: 'images/crimson_beef.png',
-            wraithchicken: 'images/wraith_chicken.png',
-            obsidianfish: 'images/obsidian_fish.png',
-            midnightshake: 'images/midnight.png'
+            evian: 'images/evian.png'
         };
 
         // Populate modal
